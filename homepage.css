@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+*{
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.main-header {
+    background-color: #00034C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Add padding to the header */
+}
+
+.dpsm-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px; /* Adjust according to your logo size */
+    height: auto;
+    padding: 5px; /* Add padding to the logo */
+}
+
+.title {
+    margin-left: 5px; /* Add space between logo and title */
+    padding: 5px; /* Add padding to the title */
+}
+
+.sub-title {
+    margin-left: 5px; /* Add space between title and sub-title */
+}
+
+.login-links {
+    display: flex;
+    justify-content: flex-end; /* Align login links to the right */
+}
+
+.logins {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px; /* Add space between login links (optional) */
+}
