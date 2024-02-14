@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ALIAS - Automated Learning and Interactive Advising System</title>
-    <!-- <link rel='preconnect' href='https://fonts.googleapis.com'> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap' rel='stylesheet'>
     <link rel="stylesheet" href="homepage.css">
 </head>
@@ -29,34 +29,123 @@
             </div>
         </div>
     </header>
-    
-
-    <!-- Page Contents -->
-    <span class="contact-us">CONTACT US</span>
-        <footer class="main-footer">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <span class="home">HOME</span>
-                    <span class="about">ABOUT</span>
-                    <span class="crs">UPV CRS</span>
+    <div class="welcome-section">
+        <div class="p-4 p-md-5 mb-4 text-body-emphasis bg-body-secondary">
+            <div class="row align-items-center">
+                <div class="col-lg-6 px-2 px-md-3">
+                    <h1 class="display-4 fst-bold">WELCOME</h1>
+                    <p class="lead my-3">This is ALIAS and I am here to help you. Let's go!</p>
+                    <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Get started</a></p>
                 </div>
-                <div class="footer-column">
-                    <span class="news">NEWS</span>
-                    <span class="feature">FEATURE</span>
-                    <span class="announcement">ANNOUNCEMENTS</span>
-                    <span class="schedule">UPCOMING SCHEDULE</span>
-                </div>
-                <div class="footer-column">
-                    <span class="komsai">UPV KOMSAI.ORG</span>
-                    <span class="statsoc">STATISTICAL SOCIETY</span>
-                    <span class="math-o">MATH-O</span>
+                <div class="col-lg-6 text-end"> <!-- Use text-end to align content to the right -->
+                    <img src="images/homepage.png" alt="Homepage Image" class="home-img">
                 </div>
             </div>
-            
-        </footer>
+        </div>
+    </div>
+
+    <div class="news-section">
+        <div class="p-2 p-md-3 mb-1 announcements">
+            <h2 class="announcements-title"><b>ANNOUNCEMENTS</b></h2>
+        </div>
+        <div class="row mb-2">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                        <div class="carousel-item">                          <div class="container">
+                            <div class="col-md-6">
+                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                <div class="col p-4 d-flex flex-column position-static">
+                                    <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+                                    <h3 class="mb-0">Featured 1</h3>
+                                    <div class="mb-1 text-body-secondary">Nov 12</div>
+                                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                    Continue reading
+                                    <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                                    </a>
+                                </div>
+                                <div class="col-auto d-none d-lg-block">
+                                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>                                
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <div class="container">
+                            <div class="col-md-6">
+                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                <div class="col p-4 d-flex flex-column position-static">
+                                    <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+                                    <h3 class="mb-0">Featured 2</h3>
+                                    <div class="mb-1 text-body-secondary">Nov 12</div>
+                                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                    Continue reading
+                                    <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                                    </a>
+                                </div>
+                                <div class="col-auto d-none d-lg-block">
+                                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>                   
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item active">
+                          <div class="container">
+                            <div class="col-md-6">
+                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                <div class="col p-4 d-flex flex-column position-static">
+                                    <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+                                    <h3 class="mb-0">Featured 3</h3>
+                                    <div class="mb-1 text-body-secondary">Nov 12</div>
+                                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                    Continue reading
+                                    <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                                    </a>
+                                </div>
+                                <div class="col-auto d-none d-lg-block">
+                                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                  <!-- Add more carousel items as needed -->
+                </div>
+                <!-- Navigation buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+    </div>
+
+    <!-- Page Contents -->
+    <div class ="footer-contents">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">HOME</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">ABOUT</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">UPV CRS</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">UPV KOMSAI.ORG</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">STATISTICAL SOCIETY</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">MATH-O</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© Floyd Russel C. Hernandez, 2023</p>
+          </footer>
+        </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+
 
 </body>
-
-
-
 </html>

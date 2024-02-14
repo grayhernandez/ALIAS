@@ -3,8 +3,15 @@
 
 *{
     font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
+    margin: 0%;
 }
+html,body {
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden;
 
+}
 
 .main-header {
     background-color: #00034C;
@@ -16,7 +23,10 @@
 
 .dpsm-logo {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 0 10px 0 10px;
 }
 
 .logo {
@@ -51,3 +61,45 @@
     color: white;
     margin-left: 10px; /* Add space between login links (optional) */
 }
+
+.p-md-5{
+    margin:0%;
+}
+
+.announcements{
+    margin: 20px;
+    font-weight: bolder;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* Change arrow color to black */
+}
+
+/* Optional: To change the color of the arrows on hover */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: invert(100%); /* Change arrow color on hover */
+}
+
+.carousel-inner .container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Custom CSS to extend or stretch text box */
+.carousel-inner .col-md-6 .row {
+    width: 100%;
+}
+
+
+.footer-contents{
+    background-color: gray;
+    align-content: space-between;
+    margin: 0%;
+}
+.footer-contents .nav-link,
+.footer-contents .text-body-secondary {
+    color: black !important ;/* Change font color to black */
+}
+
