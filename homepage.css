@@ -62,6 +62,13 @@ html,body {
     margin-left: 10px; /* Add space between login links (optional) */
 }
 
+.home-img {
+    width: auto; /* Ensure the image doesn't exceed its container's width */
+    height: 600px; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
 .p-md-5{
     margin:0%;
 }

@@ -1,0 +1,10 @@
+/* Change search button color on hover */
+.search button {
+    background-color: #ffffff;
+    color: #00034C;
+
+}
+
+.search button:hover {
+    background-color: #00034C;
+}
