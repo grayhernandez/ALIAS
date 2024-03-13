@@ -8,3 +8,15 @@
 .search button:hover {
     background-color: #00034C;
 }
+
+.result-container {
+    flex:1;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Add border for visual separation */
+    background-color: #f9f9f9; /* Add background color for better visibility */
+}
+
+
+

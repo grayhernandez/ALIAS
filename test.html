@@ -53,26 +53,33 @@
             </div>
         </header>
 
-        <div class="ais-InstantSearch">
-            <div class="right-panel">
-                <div class="container p-2 p-md-3 mb-1 text-center"> <!-- Added container class -->
-                    <h2 class="faqs-title"><b>FREQUENTLY ASKED QUESTIONS</b></h2>
-                </div>
-                <div id="searchbox" class="container"> <!-- Added container class -->
-                    <div class="row height m-2 d-flex justify-content-center align-items-center">
-                        <div class="col-md-8">
-                            <div class="search d-flex justify-content-center align-items-center">    
-                                <i class="fa fa-search"></i>
-                                <input type="text" class="form-control rounded-pill mr-2" placeholder="Have a question? Ask Now">
-                                <button class="btn btn-primary rounded-pill" style="transition: background-color 0.3s; border-color: #00034C; margin: 5px;">Search</button>
-                            </div>
-                        </div>
+
+        <div class="container">
+            <div class="p-2 p-md-3 mb-1 text-center"> <!-- Added text-center class -->
+                <h2 class="faqs-title"><b>FREQUENTLY ASKED QUESTIONS</b></h2>
+            </div>
+            <div class="row height m-2 d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <div class="search d-flex justify-content-center align-items-center">    
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control rounded-pill mr-2" placeholder="Have a question? Ask Now">
+                        <button class="btn btn-primary rounded-pill" style="transition: background-color 0.3s; border-color: #00034C; margin: 5px;">Search</button> <!-- Added rounded-pill class and transition -->
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="ais-InstantSearch">
+            <div class="right-panel">
+                <div class="p-2 p-md-3 mb-1 text-center"> <!-- Added text-center class -->
+                    <h2 class="faqs-title"><b>FREQUENTLY ASKED QUESTIONS</b></h2>
+                </div>
+                <div id="searchbox" class="container" placeholder="Search Now" style="border-radius: 5px;"></div>
                 <div id="hits"></div>
                 <div id="pagination"></div>
             </div>
         </div>
+        
 
         <script>
             const algoliaClient = algoliasearch('P9QAL65SXW', '1a990dfc473249dc3bccccb42460b41b');

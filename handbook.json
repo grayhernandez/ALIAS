@@ -51,12 +51,245 @@
     {
     "title": "Core Values (SEINE)",
     "contents": [
-        "● Service\n",
-        "● Excellence\n",
-        "● Integrity\n",
-        "● Nationalism\n",
+        "● Service",
+        "● Excellence",
+        "● Integrity",
+        "● Nationalism",
         "● Environmental stewardship"
     ],
     "keywords": ["service", "excellence", "integrity", "nationalism", "environmental stewardship"]
+},
+{
+    "title": "LEARNING DELIVERY MODES FOR AY 2023-2024",
+    "contents": ["To foster academic excellence, equip learners with skills for life in the 21st century, and enable them to attain educational resilience and learning continuity in the next normal, UP is moving forward with blended learning, which combines face-to-face (f2f) and online learning experience. There are three (3) main models of blended learning:",
+    "● Blended online learning (Model 1) is fully online, combining asynchronous and synchronous online learning.",
+    "● Blended block learning (Model 2) combines blocks of independent online study and intensive f2f sessions.",
+    "● Classic blended learning (Model 3) alternates or rotates f2f sessions and asynchronous online learning",
+    "Undergraduate courses will follow either Model except for clinical rotations, internships, on-the-job training, intensive laboratories, community-based immersion, and similar programs. Graduate courses, on the other hand, may opt to follow Model 1, 2,or 3. For models 2 and 3, the face-to-face component should be 50% to 75% and delivered in a learning-centered context following, for example, the ﬂipped classroom model. The hyﬂex mode may be adopted, provided its infrastructure is in place. Exemptions to the delivery mode may be pursued with the Chancellor based on need and circumstances."],
+    "keywords": ["blended learning", "online learning", "asynchronous online learning", "educational resilience", "learning continuity"]
+},
+{
+    "title": "Academic Calendar",
+    "contents": "The Undergraduate Academic Calendar for AY 2023-2024 was approved by UP OIC President Jose Fernando T. Alcantara on 09 May 2023. It follows the 16-week semester term with a reading break and 5-week midyear term with no reading break. Reading break is a scheduled period where class schedules and academic requirements are temporarily suspended to support faculty and student wellness. While there are no scheduled submissions or academic activities during this time, students are encouraged to create a balanced study and relaxation plan to maintain momentum for when classes resume.",
+    "keywords": ["academic calendar", "reading break", "midyear term", "academic requirements", "academic activities"]
+},
+{
+    "title": "Academic Load",
+    "contents": ["Undergraduate students shall not be allowed to take more than 18 non-laboratory units or 21 units including laboratory work; provided, however, that graduating students with an academic record better than average may be permitted to carry a heavier load in the last year of their course; provided, further, that this rule shall not affect or alter any existing course duly approved by the University Council and the Board of Regents in which the normal semestral load is more than 18 units.", "In the midyear term, the normal load shall be six units, but in justiﬁable cases, the Dean may allow a student to take 9 units", "For students participating in the UP Undergraduate Student International Mobility (MOVE UP) program, the minimum required number of credited units within an academic year for courses taken in UP shall be reduced from 30 to 24 units in the academic year that the students shall participate in the program."],
+    "keywords": ["undergraduate students", "academic load", "midyear term", "academic requirements", "academic activities"]
+},
+{
+    "title": "Medium of Instruction",
+    "contents": "English is generally used as the medium of instruction in the University. The UP Language Policy provides for the development and use of the Filipino language while maintaining English as  a  global lingua franca. The Policy states that Filipino shall be the medium of instruction in the University at the undergraduate, within a reasonable timeframe or transition period. Graduate courses of study shall be in English, though there could very well be graduate courses of study in which the medium of instruction is Filipino. English shall be maintained as the primary international language in the University to serve as its chief medium of access to the world's intellectual discourse.",
+    "keywords": ["English", "Filipino", "UP Language Policy", "medium of instruction", "global lingua franca", "primary international language", "world's intellectual discourse"]
+},
+{
+    "title": "Classification of Students",
+    "contents": ["Students of the University are classiﬁed as either regular, irregular or non-regular."
+    ],
+    "keywords": ["classification of students", "regular", "irregular", "non-regular","new first-year", "sophomore", "junior", "senior"]
+},
+{
+    "title": "Regular Students",
+    "contents": [
+    "a. Regular undergraduate students follow organized programs of study and comply with requirements that lead to the bachelor's degree or undergraduate diploma/certiﬁcate. They carry the full semester's load prescribed by their respective curricula and are identiﬁed as follows:",
+    "New First-Year: student who has been accepted to pursue a degree program available in a CU after graduating from secondary high school and has never been enrolled in any college or higher education institution; has not ﬁnished the prescribed subjects for the ﬁrst year of the curriculum or has ﬁnished less than 25% of the total number of units required in the entire degree program.",
+    "Sophomore: student who has completed the prescribed subjects for the ﬁrst year of the curriculum or has ﬁnished not less than 25% nor more than 50% of the total number of units required in the entire course.",
+    "Junior: student who has completed the prescribed subjects for the ﬁrst two (2) years of the curriculum or has ﬁnished not less than 50% nor more than 75% of the total number of units required in the entire course.",
+    "Senior: student who has completed the prescribed subjects for the ﬁrst, second, and third years of the curriculum or has ﬁnished not less than 75% of the total number of units required in the entire course",
+    "In the case of students under a 5-year program, percentages will be prorated accordingly."
+    ],
+    "keywords": ["regular students", "new first-year", "sophomore", "junior", "senior"]
+},
+{
+    "title": "Regular Graduate Students",
+    "contents": "follow an  organized  program  of study and comply with requirements that lead to a master's or doctoral degree. They may be either part-time or full-time students.",
+    "keywords": ["masters", "doctoral", "part-time", "full-time"]
+},
+{
+    "title": "Shiftee Students",
+    "contents": "are students who have opted to change either their degree program within the College (S1) or from one college to another within their current CU (S2). For UPV, students are allowed to shift after earning 15 units, subject to compliance with the admission requirements of the new program. Upon admission, the students submit the following: application letter addressed to the Dean, true copy of grades, college/school clearance, and certiﬁcate of good moral character.",
+    "keywords": ["shiftee students", "degree program", "college/school clearance", "certificate of good moral character"]
+},
+{
+    "title": "Transferees",
+    "contents": [
+        "are students whose admission is subject to the rules of the CU, the colleges, and the departments that offer their preferred degree programs. They may be transferring within the UP System or from one CU to another (T1) or transferring from another school or a non-UP campus; this category also includes second-degree program students (T2). Former students who have attended another institution since leaving UP and foreign transfer applicants also belong to this group.",
+        "T1 students must have completed at least 30 collegiate academic units to qualify for transfer, subject to the rules of the admitting college/school. Subjects previously cross-enrolled in another CU, if any, will not be considered for the purpose of meeting the 30-unit requirement. Upon admission, T1 students submit the following: clearance from the college /school where they came from, permit to transfer, ofﬁcial transcript of records, and certiﬁcate of good moral character."
+    ],
+    "keywords": ["degree program", "college/school clearance", "certificate of good moral character", "T1", "T2", "transferees"]
+},
+
+
+
+{
+    "title": "First-year students",
+    "contents": "are T2 students who are in their ﬁrst term in the University, and second-degree program students, who are at their ﬁrst-year level based on their curriculum.",
+    "keywords": ["first-year students", "second-degree program students"]
+},
+{
+    "title": "Continuing students",
+    "contents": [
+        "are students who have been enrolled in any degree program, college, or HEI. They are primarily T1, S1 and S2 categories who have been enrolled in any CU within the UP System.",
+        "Students under T2 category are referred as transferees on their ﬁrst semester in the University. They are tagged as continuing students in their succeeding year(s)."
+    ],
+    "keywords": ["continuing students", "transferees", "T2"]
+},
+{
+    "title": "Exchange Students",
+    "contents": [
+        "are undergraduate students who are taking courses at UP's partner international universities. These courses may be credited when they return to the University. Aside from taking courses, they may also conduct their research or attend a degree-related training abroad.",
+        "Students who apply as exchange students must seek a written permission of the Chancellor upon recommendation of the adviser, institute director/division or department chair, and the dean. Such recommendations must indicate  the  number  of units and the courses to be taken. The students must provide a description of the courses to be taken.",
+        "If the students do not intend to credit the courses taken abroad, then they may apply for leave of absence (LOA) from the University. By doing so, their stay abroad will not be counted as part of their residence in the University. Their enrollment abroad will not be reﬂected in their transcript of records.",
+        "All academic units/courses taken by undergraduate exchange students in a foreign university under the UP Undergraduate Student International Mobility (MOVE UP) Program shall be credited in UP, provided that these courses have been approved for credit by the student’s program adviser, the department chair/institute director and the college dean. This applies to the computation of the ﬁnal average of students vying for Latin honors.",
+        "Aside from the MOVE UP, the UP Academic Credit Transfer System (UP ACTS) was approved to enable the recognition of credits gained by UP students while studying abroad and facilitate the transfer of credits international students earn in UP to their home institution. The UP ACTS Guide (ver. 1), which covers the crediting of courses, processing credit transfer, and reporting of accredited courses from student exchange, can be accessed at this site: https://drive.google.com/ﬁle/d/1a-Kiq3oopPNFt-sVUoU0nJ8iRFjeS04S/view"
+    ],
+    "keywords": ["exchange students", "partner international universities", "research", "degree-related training"]
+},
+{
+    "title": "Irregular Students",
+    "contents": "These are students who registered for formal credit but carry less than the full load called for in a given semester by their curriculum.",
+    "keywords": ["irregular students", "formal credit"]
+},
+{
+    "title": "Non-regular Students",
+    "contents": [
+        "a. Non-degree students with credits are degree holders or undergraduate students who are not currently enrolled in any other institution of higher learning and who are enrolled in the University for credit. They do not follow an organized program of study; thus, they are not prospective candidates  for graduation for any degree in the University. They shall not be allowed to enroll for more than one (1) semester, except by special permission of the Dean of the college concerned and the University Registrar",
+        "b. Non-majors with credits are students who were dismissed from their respective colleges, but not from the University, for failure to meet the retention requirements of their program and have not been accepted yet for admission to another college. They will be under the OUR and advised by College Secretaries for the OUR, until the students have transferred to another college. Non-majors shall be assessed/counseled by the Ofﬁce of Counseling and Guidance or its equivalent ofﬁce",
+        "Students can be non-majors only for one (1) year, during which time, they are expected to seek admission to another college. Units earned as non-major can be credited towards the new degree program to which the students will be readmitted",
+        "c. Cross registrants with credits are students who attend classes in other units/colleges within or outside a CU for a speciﬁc period but are primarily enrolled in their home units/colleges in the same CU or in another CU or in another institution of higher learning. Their enrollment is subject to the approval of the Deans of the home and the accepting or host units/colleges.",
+        "d. Special students without credit are those who are not earning formal academic credit for their work."
+    ],
+    "keywords": ["non-regular", "non-major", "cross registrants", "special students", "formal academic credit"]
+},
+
+
+{
+    "title": " Admission",
+    "contents": [
+        "No student shall be denied admission to the University by reason of age, sex, nationality, religious belief, or political afﬁliations.",
+        "In pursuit of academic excellence and its mandate as the National University, the University adopts the Excellence-Equity Admission System (EEAS) or the UP-Admission Index (UPAI) to democratize and diversify the composition of the UP studentry. Thus, socio-economic, and geographic factors are considered in the admission process to represent the country's population while maintaining high academic standards.",
+        "Students are required to submit their entrance credentials to be officially admitted to the University. Students with incomplete entrance credentials will be given provisional admission to the University for only up to one (1) year. Provisional admission may be extended beyond one (1) year on a case-to-case basis especially for reasons that are beyond the control of the student. The student shall provide proof that they are processing their entrance credentials from their previous school.",
+        "Every applicant for admission shall undergo a thorough health examination. No person shall be admitted to this University who is found by the University Health Service (UHS) to be suffering from a dangerous, communicable, contagious, or infectious disease or who is physically unﬁt to take courses in any college or school of the University.",
+        "Every student shall, upon admission, sign the following pledge:",
+        "“In consideration  of  my  admission  to  the  University  of  the Philippines and of the privileges of a student in this institution, I hereby promise and pledge to abide by and comply with, all the rules and regulations laid down by competent authority in the University and in the college or school in which I am enrolled.”",
+        "Refusal to take this pledge or violation of its terms shall be sufﬁcient cause for summary dismissal or denial of admission",
+        "As required by law, the University processes the personal information and sensitive personal information of admission applicants to safeguard academic freedom, uphold their right to quality education, and protect their right to data privacy in conformity with Republic Act No. 10173, otherwise known as the Data Privacy Act of 2012, and its implementing rules and regulations."
+    ],
+    "keywords": []
+},
+{
+    "title": "Validation of Advance Credits",
+    "contents": [
+        "The admission of transfer students shall be on probation basis until such time the students shall have validated or repeated all the subjects taken outside the UP System which are required for their course.",
+        "They will not be allowed to enroll in a subject or subjects the prerequisite of which, taken elsewhere, have not yet been validated or repeated in the University",
+        "Admitted transfer students must validate all the courses they are offering for advanced credits at the rate of at least 18 units a semester within a period not exceeding three (3) semesters from the date of their admission. Failure to comply with this requirement will mean the cancellation of their registration privileges",
+        "A student transferring from any recognized institution who possesses an Associate in Arts or its equivalent of 66 units of work may be enrolled without validation. Before a student is allowed to major in any discipline, the major discipline may prescribe additional courses up to 18 units of general education courses and/or preparatory courses for the major. Candidates for a second baccalaureate degree will be required to take a written comprehensive examination",
+        "The grant of advanced credits for courses which are completed in other institutions, but which have no equivalent in this University shall be left to the faculty of the unit concerned",
+        "Application for advanced credit shall be made, using the prescribed form to the University Registrar or to the Dean of the college or school which offers the course for which advanced credit is applied. Validation tests begin two (2) weeks before the ﬁrst day of registration of each semester and shall end one (1) week after the last day of registration. There is no fee for validation tests during this period. A validation test may be held outside of this period with the consent of the Department or Division Chair and approval of the Dean or Director and upon payment of a fee per subject.",
+        "Each college or school may promulgate rules for the admission of transfer students and the granting of advance credits provided they are not inconsistent with the general rules set by the University Council"
+    ],
+    "keywords":[]
+},
+{
+    "title": "Readmission",
+    "contents": [
+        "Rejoining students (those not enrolled during the immediately preceding semester, excluding the midyear session) should ﬁrst request for readmission from the Dean of their College where they were last enrolled.",
+        "The authority to approve readmission from AWOL is delegated to the University Registrar while readmission of permanently disqualiﬁed (PDQ) students is delegated to the VCAA. A student applying for readmission from AWOL must pay a readmission fee",
+        "Former students who have attended another institution since attending the University of the Philippines must qualify on the same basis as new transfer students."
+    ],
+    "keywords":[]
+},
+{
+    "title": "General Education (GE) Programs",
+    "contents": [
+        "All undergraduate students enrolled in the bachelor's degree programs are required to take general education courses. For UPV, the GE program requires 21 units of core GE courses and 15 units of elective GE courses. The core GE courses are as follows:",
+        "insert table here"
+    ],
+    "keywords":[]
+},
+{
+    "title": "Physical Education (PE Requirements)",
+    "contents": [
+        "All undergraduates’ students are required to take eight (8) units of PE with the following exceptions:",
+        "1. students who hold the Associate in Arts title (or equivalent) or a Bachelor's degree;",
+        "2. students who are 30 years old or older;",
+        "3. veterans of the armed forces, navy, or airforce; and",
+        "4. students who have served on a full-time basis for at least two (2) years in the armed forces, navy, or airforce.",
+        "The require PE courses are PE1 and any three (3) courses classified as PE 2 or PE 3, provided that these courses are for different activities."
+    ],
+    "keywords": []
+},
+{
+    "title": " Proficiency Examination in Physical Education (PEPE)",
+    "contents": [
+        "Proﬁciency examinations (or credit by examination) in PE courses are given to enable students who are already skillful in one or more sports to acquire advanced units in PE. Any student who passes the PEPE shall be given credit for one or more PE courses. The examination is given before the start of every semester.",
+        "A student who is graduating at the end of a given semester but who failed to enroll in a required PE course may take a special proﬁciency examination upon presentation of a certiﬁcate of candidacy for graduation from his College Secretary. The student pays a fee for the special PEPE."
+    ],
+    "keywords":[]
+},
+{
+    "title": "National Service Training Program",
+    "contents": [
+        "All students enrolled in any baccalaureate degree shall be required to complete six (6) units in one of the NSTP components listed below as a requisite for graduation",
+        "a. Reserve Ofﬁcers' Training Corps (ROTC)",
+        "b. Literacy Training Service (LTS)",
+        "c. Civic Welfare Training Service (CWTS)"
+    ],
+    "keywords":[]
+},
+{
+    "title": "Registration",
+    "contents": [
+        "A student must be ofﬁcially registered in order to receive credit for course work. No person who has not duly matriculated may be admitted to the classes. In exceptional cases, the Registrar may, on the recommendation of the Dean concerned, authorize the admission of a visitor to a class for not more than ﬁve (5) sessions.",
+        "No student shall be registered in any subject after one (1) week of regular class meetings have been held, unless the Dean permits the registration of the student on the basis of the student's scholastic record and that:",
+        "a. A special student may register at any time without the payment of the ﬁne for late registration subject to other regulations of the University.",
+        "b. A student may register for a particular subject within a semester when permissible under the system of instruction adopted by the college or school.",
+        "There will be no late registration. Instead, the Chancellors shall prescribe a reasonable amount of time for registration.",
+        "Students may be allowed to enroll in subjects outside their curriculum based on these rules:",
+        "a. They have expressed their intention to shift by writing to the Department Chair/Institute Director of the home unit.",
+        "b. They must shift within one (1) year, subject to compliance with the admission requirements of the admitting unit.",        
+        "c. If after one (1) year they have failed to shift out, they must follow the curriculum of the original program.",
+        "d. Their registration/program adviser must inform them of the consequences of enrolling in courses outside the curriculum, e.g., added academic load and possible delay in graduation.",
+        "As a matter of policy, simultaneous enrollment in two-degree programs is not allowed by the University.",
+        "Students with incomplete entrance credentials may be allowed to provisional enrollment. It should be noted that enrollment in courses while provisionally admitted to the University is not ofﬁcial until complete entrance credentials are submitted."
+        ],
+    "keywords":[]
+},
+{
+    "title": "Free Tuition Policy",
+    "contents": [
+        "In accordance with the Universal Access to Quality Tertiary Education Act of 2017, or R.A. 10931, all eligible students will  be granted free tuition and miscellaneous fees when they enroll in the University of the Philippines.",
+        "Students who fail to complete their bachelor's degree or comparable undergraduate degree within a year after the period prescribed in the program are no longer eligible to enjoy the privilege of free tuition and other fees.",
+        "The “prescribed period” refers to the normal length of time to complete the requirements for graduation. Counting is done from the start of the student's enrollment in UP.",
+        "Students who hold a dual citizenship (e.g., Filipino-American, Filipino-Chinese) and choose to be classiﬁed as Filipino during their initial enrollment will be considered Filipino until graduation. They can also avail of the free tuition. Prior to admission, these students must submit their identiﬁcation certiﬁcates (ICs) issued by the Bureau of Immigration or their Philippine passports with either a report of birth or a reacquisition of citizenship."
+    ],
+    "keywords":[]
+},
+{
+    "title": "CROSS REGISTRATION: Within the University",
+    "contents": [
+        "No student shall be registered in any other college, school, or university without the permission of the Dean and Director/Chair of the College/School and Institute/Department in which the student is primarily enrolled.",
+        "A student who wants to register in another campus in the University must ﬁll out the cross-registration form. The total number of units of credit for which a student may register in two or more colleges or schools in this University shall not exceed the maximum allowed by the rules on academic load.",
+        "Full cross-registration in any other UP campus shall be allowed only when a graduating student that particular semester needs required subject/s which is/are not offered in the student’s home campus or for health reasons necessitating prolonged medical treatment.",
+        "Students who are cross-registered are considered in residence in their respective constituent university."
+    ],
+    "keywords":[]
+},
+{
+    "title": "CROSS REGISTRATION: To another institution",
+    "contents": [
+        "The University gives no credit for any course taken by any of its students in any other university, college, or school unless the taking of such course was expressly authorized by the University Registrar on the recommendation of the Dean concerned. [E.O. No. 1 dated 13 March 1984; EO No. 2 dated 14 March 1984; Memorandum FN 90-12 dated 07 March 1990] The authorization shall be in writing to be recorded by the University Registrar or by the student’s representative and shall speciﬁcally describe the subjects authorized.",
+        "Courses taken outside the University are subject to validation. Courses taken in a foreign university during student mobility will not be included in the computation of the Curriculum Weighted Average Grade (CWAG) / General Weighted Average Grade (GWA)."
+    ],
+    "keywords":[]
+},
+{
+    "title": "CROSS REGISTRATION: From another institution",
+    "contents": [
+        "No student registered in any other institution shall be admitted to the University without a written permit from his/her Dean, Director, or Registrar. The permit shall state the total number of units for which the student is registered and the subjects that he/she is authorized to take in the University. Admission is subject to availability of slots and must have the approval of the Dean of the unit concerned."
+    ],
+    "keywords":[]
 }
+
 ]

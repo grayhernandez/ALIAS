@@ -1,73 +1,176 @@
-<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ALIAS - Automated Learning and Interactive Advising System</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap' rel='stylesheet'>
+        <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="faqs.css">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ALIAS - Automated Learning and Interactive Advising System</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap' rel='stylesheet'>
-    <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="faqs.css">
-</head>
-
-<body>
-    <header class="main-header">
-        <div class="dpsm-logo">
-            <div class="dpsm">
-                <a href="homepage.html" class="logo">
-                    <img src="images/dpsmlogo.png" alt="DPSM Logo" class="logo-img">
-                    <div class="title">
-                        <span class="main-title"><b>ALIAS</b> <br> Automated Learning and Interactive Advising System</span>
-                    </div>
-                </a>
-            </div>
-            <div class="login-links">
-                <a href="student-login.html" class="logins">STUDENT</a>
-                <a href="adviser-login.html" class="logins">PROGRAM ADVISER</a>
-                <a href="admin-login.html" class="logins">ADMIN</a>
-                <a href="faqs.html" class="logins">FAQs</a>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="p-2 p-md-3 mb-1 text-center"> <!-- Added text-center class -->
-            <h2 class="faqs-title"><b>FREQUENTLY ASKED QUESTIONS</b></h2>
-        </div>
-        <div class="row height m-2 d-flex justify-content-center align-items-center">
-            <div class="col-md-8">
-                <div class="search d-flex justify-content-center align-items-center"> <!-- Updated alignment -->
-                    <i class="fa fa-search"></i>
-                    <input type="text" class="form-control rounded-pill mr-2" placeholder="Have a question? Ask Now"> <!-- Added rounded-pill class and margin -->
-                    <button class="btn btn-primary rounded-pill" style="transition: background-color 0.3s; border-color: #00034C; margin: 5px;">Search</button> <!-- Added rounded-pill class and transition -->
+        <!-- search only version -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/algoliasearch@4.22.1/dist/algoliasearch-lite.umd.js"
+            integrity="sha256-pxkGFjfnFWYGOtV9uhCWK/spKiGS0Z7gVDKYm39LyfM="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.65.0/dist/instantsearch.production.min.js"
+            integrity="sha256-5u4a3JbgF+Ok/p1R8e9iF4nWi4Qs8O1b89pc+8p1UB4="
+            crossorigin="anonymous"
+        ></script>
+        
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/satellite-min.css"
+            integrity="sha256-p/rGN4RGy6EDumyxF9t7LKxWGg6/MZfGhJM/asKkqvA="
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="main-header">
+            <div class="dpsm-logo">
+                <div class="dpsm">
+                    <a href="homepage.html" class="logo">
+                        <img src="images/dpsmlogo.png" alt="DPSM Logo" class="logo-img">
+                        <div class="title">
+                            <span class="main-title"><b>ALIAS</b> <br> Automated Learning and Interactive Advising System</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="login-links">
+                    <a href="student-login.html" class="logins">STUDENT</a>
+                    <a href="adviser-login.html" class="logins">PROGRAM ADVISER</a>
+                    <a href="admin-login.html" class="logins">ADMIN</a>
+                    <a href="faqs.html" class="logins">FAQs</a>
                 </div>
             </div>
+        </header>
+        <div class="ais-InstantSearch">
+            <div class="right-panel">
+                <div class="p-2 p-md-3 mb-1 text-center">
+                    <h2 class="faqs-title"><b>FREQUENTLY ASKED QUESTIONS</b></h2>
+                </div>
+        
+                <div id="searchbox" class="row height m-2 d-flex justify-content-center align-items-center">
+                </div>
+        
+                <div id="hits"></div>
+                <div id="pagination"></div>
+            </div>
         </div>
-    </div>
-    
-    
-    
-
-
-
-    <div class ="footer-contents">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">HOME</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">ABOUT</a></li>
-                <li class="nav-item"><a href="https://crs.upv.edu.ph/" class="nav-link px-2 text-body-secondary">UPV CRS</a></li>
-                <li class="nav-item"><a href="https://www.facebook.com/UPVKomsai.Org/" class="nav-link px-2 text-body-secondary">UPV KOMSAI.ORG</a></li>
-                <li class="nav-item"><a href="https://www.facebook.com/UPVStatSoc" class="nav-link px-2 text-body-secondary">STATISTICAL SOCIETY</a></li>
-                <li class="nav-item"><a href="https://www.facebook.com/UPVMathCircle" class="nav-link px-2 text-body-secondary">MATH-O</a></li>
-              </ul>
-            <p class="text-center text-body-secondary">© Floyd Russel C. Hernandez, 2023</p>
-          </footer>
+        
+        <script>
+            document.getElementById('search-button').addEventListener('click', () => {
+                const searchQuery = document.getElementById('search-input').value;
+                const searchWords = searchQuery.split(' '); // Split the search query into an array of words
+                searchWords.forEach(word => {
+                    search.searchAlgolia(word); // Pass each word to the searchAlgolia function individually
+                });
+            });
+        </script>
+        
+        <script>
+            const algoliaClient = algoliasearch('P9QAL65SXW', '1a990dfc473249dc3bccccb42460b41b');
+        
+            const searchClient = {
+                ...algoliaClient,
+                search(requests) {
+                    if (requests.every(({ params }) => !params.query)) {
+                        return Promise.resolve({
+                            results: requests.map(() => ({
+                                hits: [],
+                                nbHits: 0,
+                                nbPages: 0,
+                                page: 0,
+                                processingTimeMS: 0,
+                                hitsPerPage: 0,
+                                exhaustiveNbHits: false,
+                                query: '',
+                                params: '',
+                            })),
+                        });
+                    }
+        
+                    return algoliaClient.search(requests);
+                },
+            };
+        
+            const search = instantsearch({
+                searchClient,
+                indexName: 'ALIAS',
+                insights: true,
+            });
+        
+            search.addWidgets([
+                instantsearch.widgets.searchBox({
+                    container: '#searchbox',
+                    placeholder: "Have a question? Ask Now",
+                }),
+        
+                instantsearch.widgets.hits({
+                    container: '#hits',
+                    templates: {
+                        item(hit, { html, components }) {
+                            // Limit the contents to 100 characters
+                            return html`
+                                <a href="faqs-result.html?hitId=${hit.objectID}" class="result-link" style="text-decoration: none; color: black"> <!-- Wrap each hit with a link -->
+                                    <div class="result-container"> <!-- Container box for each hit -->
+                                        <h2>
+                                            ${components.Highlight({
+                                                attribute: 'title',
+                                                hit,
+                                            })}
+                                        </h2>
+                                        <p>
+                                            ${components.Highlight({
+                                                attribute: 'contents',
+                                                hit,
+                                            })}
+                                        </p>
+                                    </div>
+                                </a>
+                            `;
+                        },
+                        empty(results, { html }) {
+                            return html``;
+                        },
+                    },
+                }),
+            ]);
+        
+            const pagination = instantsearch.widgets.panel({
+                hidden: ({ results }) => results.nbPages < 2,
+            })(instantsearch.widgets.pagination);
+        
+            search.addWidget(
+                pagination({
+                    container: '#pagination',
+                }),
+            );
+        
+            search.start();
+        </script>
+        
+        <!-- Footer -->
+        <div class ="footer-contents">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">HOME</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">ABOUT</a></li>
+                    <li class="nav-item"><a href="https://crs.upv.edu.ph/" class="nav-link px-2 text-body-secondary">UPV CRS</a></li>
+                    <li class="nav-item"><a href="https://www.facebook.com/UPVKomsai.Org/" class="nav-link px-2 text-body-secondary">UPV KOMSAI.ORG</a></li>
+                    <li class="nav-item"><a href="https://www.facebook.com/UPVStatSoc" class="nav-link px-2 text-body-secondary">STATISTICAL SOCIETY</a></li>
+                    <li class="nav-item"><a href="https://www.facebook.com/UPVMathCircle" class="nav-link px-2 text-body-secondary">MATH-O</a></li>
+                </ul>
+                <p class="text-center text-body-secondary">© Floyd Russel C. Hernandez, 2023</p>
+            </footer>
         </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
 
 
-</body>
+    </body>
 </html>
