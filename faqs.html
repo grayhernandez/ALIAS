@@ -113,19 +113,18 @@
                     container: '#hits',
                     templates: {
                         item(hit, { html, components }) {
-                            // Limit the contents to 100 characters
                             return html`
                                 <a href="faqs-result.html?hitId=${hit.objectID}" class="result-link" style="text-decoration: none; color: black"> <!-- Wrap each hit with a link -->
-                                    <div class="result-container"> <!-- Container box for each hit -->
+                                    <div class="results-container"> <!-- Container box for each hit -->
                                         <h2>
                                             ${components.Highlight({
                                                 attribute: 'title',
                                                 hit,
                                             })}
                                         </h2>
-                                        <p>
+                                        <p class="truncated-content"> <!-- Use a class for the truncated content -->
                                             ${components.Highlight({
-                                                attribute: 'contents',
+                                                attribute: 'contents', 
                                                 hit,
                                             })}
                                         </p>
@@ -133,6 +132,7 @@
                                 </a>
                             `;
                         },
+
                         empty(results, { html }) {
                             return html``;
                         },

@@ -109,13 +109,27 @@
                 .getObject(hitId)
                 .then((object) => {
                     console.log('Content:', object);
+                    let contentHTML = '';
+
+                    for (const content of object.contents) {
+                        if (typeof(content) ==='string') {
+                            contentHTML += `<p>${content}</p>`;
+                        } else {
+                            contentHTML += '<ul>';
+                            for (const bullet of content) {
+                                contentHTML += `<li>${bullet}</li>`
+                            }
+                            contentHTML += '</ul>';
+                        }
+                    }
+
                     var resultContent =
                         document.getElementById('result-content');
                     resultContent.innerHTML = `
                         <div class="result-container">
-                        <h1>${object.title}</h1>
-                        <p>${object.contents}</p>
-                        <button id="back-button">Back to FAQs</button>
+                            <a href="faqs.html" class="back">Back to FAQs</a>
+                            <h1 style="text-align: center">${object.title}</h1>
+                            <p>${contentHTML}</p>
                         </div>
                     `;
                 })
