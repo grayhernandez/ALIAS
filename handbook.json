@@ -15,7 +15,9 @@
 
     {
         "title": "Academic Calendar",
-        "contents": "The Undergraduate Academic Calendar for AY 2023-2024 was approved by UP OIC President Jose Fernando T. Alcantara on 09 May 2023. It follows the 16-week semester term with a reading break and 5-week midyear term with no reading break. Reading break is a scheduled period where class schedules and academic requirements are temporarily suspended to support faculty and student wellness. While there are no scheduled submissions or academic activities during this time, students are encouraged to create a balanced study and relaxation plan to maintain momentum for when classes resume.",
+        "contents": 
+[        "The Undergraduate Academic Calendar for AY 2023-2024 was approved by UP OIC President Jose Fernando T. Alcantara on 09 May 2023. It follows the 16-week semester term with a reading break and 5-week midyear term with no reading break. Reading break is a scheduled period where class schedules and academic requirements are temporarily suspended to support faculty and student wellness. While there are no scheduled submissions or academic activities during this time, students are encouraged to create a balanced study and relaxation plan to maintain momentum for when classes resume."
+],
         "keywords": ["academic calendar", "reading break", "midyear term", "academic requirements", "academic activities"]
     },
     {
@@ -25,8 +27,9 @@
     },
     {
         "title": "Medium of Instruction",
-        "contents": "English is generally used as the medium of instruction in the University. The UP Language Policy provides for the development and use of the Filipino language while maintaining English as  a  global lingua franca. The Policy states that Filipino shall be the medium of instruction in the University at the undergraduate, within a reasonable timeframe or transition period. Graduate courses of study shall be in English, though there could very well be graduate courses of study in which the medium of instruction is Filipino. English shall be maintained as the primary international language in the University to serve as its chief medium of access to the world's intellectual discourse.",
-        "keywords": ["English", "Filipino", "UP Language Policy", "medium of instruction", "global lingua franca", "primary international language", "world's intellectual discourse"]
+        "contents": 
+[        "English is generally used as the medium of instruction in the University. The UP Language Policy provides for the development and use of the Filipino language while maintaining English as  a  global lingua franca. The Policy states that Filipino shall be the medium of instruction in the University at the undergraduate, within a reasonable timeframe or transition period. Graduate courses of study shall be in English, though there could very well be graduate courses of study in which the medium of instruction is Filipino. English shall be maintained as the primary international language in the University to serve as its chief medium of access to the world's intellectual discourse."
+],        "keywords": ["English", "Filipino", "UP Language Policy", "medium of instruction", "global lingua franca", "primary international language", "world's intellectual discourse"]
     },
     {
         "title": "Classification of Students",
@@ -62,8 +65,9 @@
     },
     {
         "title": "Irregular Students",
-        "contents": "These are students who registered for formal credit but carry less than the full load called for in a given semester by their curriculum.",
-        "keywords": ["irregular students", "formal credit"]
+        "contents": 
+[        "These are students who registered for formal credit but carry less than the full load called for in a given semester by their curriculum."
+],        "keywords": ["irregular students", "formal credit"]
     },
     {
         "title": "Non-regular Students",
@@ -118,7 +122,7 @@
             "All undergraduate students enrolled in the bachelor's degree programs are required to take general education courses. For UPV, the GE program requires 21 units of core GE courses and 15 units of elective GE courses. The core GE courses are as follows:",
             "insert table here"
         ],
-        "keywords":[]
+        "keywords":["GE", ""]
     },
     {
         "title": "Physical Education (PE Requirements)",
@@ -463,6 +467,322 @@
         "Scholarship renewal",
         "Tuition fee waiver"
         ]
-    }      
-      
+    },
+    {
+        "title": "Scholastic Delinquency",
+        "contents": [
+        [
+            "The faculty of each college or school shall approve suitable and effective provisions governing undergraduate delinquent students, subject to the following minimum standards:"
+        ],
+        [
+            "Warning. Any student who obtains final grades at the end of the semester below “3” in 25% to 49% of the total number of academic units for which the student is registered will receive a warning from the Dean to improve his/her work."
+        ],
+        [
+            "Probation. Any student who, at the end of the semester, obtains final grades below “3” in 50% to 75% of the total number of academic units in which the student has final grades shall be placed on probation for the succeeding semester and his/her load shall be limited to the extent to be determined by the Dean. Probation may be removed by passing with grades of “3” or better in more than 50% of the units in which the student has final grades in the succeeding semester."
+        ],
+        [
+            "Dismissal. Any student who, at the end of the semester, obtains final grades below “3” in more than 75% but less than 100% of the total number of academic units in which he/she receives final grades shall be dropped from the rolls of the college/school."
+        ],
+        [
+            "Any student on probation in accordance with the preceding rule who again fails in 50% or more of the total number of units in which he/she receives final grades shall be dropped from the rolls of his/her college or school."
+        ],
+        [
+            "Any student dropped from one college or school shall not ordinarily be admitted to another unit of the University, unless in the opinion of the Director of the Office of Student Affairs the natural aptitude and interest of the student may qualify the student in another field of study, in which case the student may be allowed to enroll in the proper college, or school, or department."
+        ],
+        [
+            "Permanent Disqualification. Any student who, at the end of the semester or term, obtains final grades below “3” in 100% of the academic units in which he/she is given final grades shall be permanently barred from readmission to any college or school of the University."
+        ],
+        [
+            "Any student who was dropped in accordance with the rules on Dismissal and again fails so that it becomes necessary again to drop the student, shall not be eligible for readmission to any college or school of the University."
+        ],
+        [
+            "Permanent disqualification does not apply to cases where, on recommendation of the instructors concerned, the faculty certifies that the grades of “5” were due to the student's unauthorized dropping of the subjects and not to poor scholarship. However, if the unauthorized withdrawal takes place after the mid-semester and the student's class standing is poor, the grade of “5” shall be counted against the student for the purpose of this scholarship rule. The Dean shall deal with these cases on their individual merits in the light of the recommendations of the Director of the Office of Student Affairs; Provided that in no case of readmission to the same or another college or school shall the action be lighter than probation."
+        ],
+        [
+            "A grade of INC is not to be included in the computation of GWA. When it is replaced by a final grade, the latter is to be included in the grades during the semester when the removal is made."
+        ],
+        [
+            "The grade of “4” is included in the computation of GWA until it is removed. Once removed, only the final grade of “3” or “5” is included. When the one-year grace period for removal has lapsed, the grade of 4 is automatically changed to 5. In this case, the “5” is included in the GWA computation. When the course is re-enrolled, the new grade is also included."
+        ],
+        [
+            "No readmission of dismissed students or disqualified students shall be considered by the Deans and Directors without the favorable recommendation of the University Guidance Counselor. Cases in which the action of the Dean conflicts with the recommendation of the University Guidance Counselor may be elevated to the Vice Chancellor for Academic Affairs, whose decision shall be final."
+        ]
+        ],
+        "keywords": [
+        "Scholastic Delinquency",
+        "Warning",
+        "Probation",
+        "Dismissal",
+        "Permanent Disqualification",
+        "Class standing",
+        "Instructors",
+        "Unauthorized withdrawal",
+        "GWA computation",
+        "Readmission",
+        "University Guidance Counselor",
+        "Vice Chancellor for Academic Affairs"
+        ]
+    },
+    {
+        "title": "Leave of Absence (LOA)",
+        "contents": [
+        [
+            "A leave of absence must be requested in a written petition (NOTE: Application form for LOA may be downloaded from the CRS) for approval of the Dean. The petition must state the reason for which the leave is desired and must specify the period of the leave, which must not exceed one (1) academic year but may be renewed for at most another year. When not taken in two (2) successive years, the aggregate leave of absence should not exceed two (2) years."
+        ],
+        [
+            "Students who need to go on leave of absence beyond the allowable period of two (2) years shall apply for an honorable dismissal without prejudice to readmission. Students who fail to apply for an honorable dismissal beyond one (1) year shall have their registration privileges permanently withdrawn."
+        ],
+        [
+        "For leave of absence availed during the second half of the semester, the faculty members concerned shall be required to indicate the class standing of the student (passing or failing) at the time of the application for the leave. No application for leave of absence shall be approved without indicating the class standing by the instructors concerned. This, however, should not be entered in the official Report of Grades. No leave of absence shall be granted during the semester within two (2) weeks before the last day of classes."
+        ],
+        [
+        "If a student who withdraws after ¾ of the total number of hours prescribed for a course has already lapsed, the instructors may submit a grade of “5” if the class standing of the student up to the time of the withdrawal is below “3”."
+        ],
+        [
+        "Students who withdraw from a college or school without formal leave of absence shall have their registration privileges curtailed or entirely withdrawn."
+        ]
+    ],
+    "keywords": [
+        "Leave of Absence",
+        "LOA",
+        "Petition",
+        "Honorable dismissal",
+        "Registration privileges",
+        "Class standing",
+        "Official Report of Grades",
+        "Withdrawal"
+    ]
+    },
+    {
+    "title": "Maximum Residence Rule (MRR)",
+    "contents": [
+        [
+        "A student must finish the requirements of a course of any college within a period of actual residence equivalent to 1 1/2 times the normal length prescribed for the program, otherwise the student shall not be allowed to register further in that college. Thus, the prescribed years to finish a 4-year and 5-year Bachelor’s degree program are 6 and 7.5 years, respectively. The counting of the period of residence shall start from the student’s first enrollment in the University."
+        ],
+        [
+        "LOA is not counted towards MRR for both undergraduate and graduate students."
+        ],
+        [
+        "Under meritorious cases, extension of residence may be granted. The faculty of each college shall designate the approving authority for such extensions. Each extension granted shall be reported to the Chancellor through the Vice Chancellor for Academic Affairs."
+        ]
+    ],
+    "keywords": [
+        "Maximum Residence Rule",
+        "MRR",
+        "Actual residence",
+        "Program length",
+        "Enrollment",
+        "Extension of residence",
+        "Chancellor",
+        "Vice Chancellor for Academic Affairs"
+    ]
+    },
+    {
+    "title": "Honorable Dismissal (HD)",
+    "contents": [
+        [
+        "Students in good standing who desire to sever their connection with the University shall present a written petition to this effect to the University Registrar, signed by the parent or guardian of the student. If the petition is granted, the student shall be given honorable dismissal. Without such petition and favorable action, no record of honorable dismissal shall be made. Honorable dismissal is issued only once."
+        ],
+        [
+        "Honorable dismissal is voluntary withdrawal from the University with the consent of the University Registrar or his/her representative. All indebtedness to the University must be settled before a statement of honorable dismissal will be issued. The statement indicates that the student withdrew in good standing as far as character and conduct are concerned. If the student has been dropped from the rolls on account of poor scholarship, a statement to that effect may be added to the honorable dismissal."
+        ],
+        [
+        "Students who leave the University by reason of expulsion due to disciplinary action shall be allowed to obtain their academic transcript of record without reference to Dishonorable Dismissal, provided:",
+        "a. the students write an application;",
+        "b. not less than one (1) school year, beginning the school year immediately following the effectivity of the expulsion decision has elapsed;",
+        "c. the parties concerned, during the period of expulsion, have not been involved in any untoward incident affecting the University, or been charged in court after the fiscal's investigation; and",
+        "d. all such applications are subject to Board of Regents action."
+        ],
+        [
+        "Certificates of honorable dismissal shall not be issued to graduates."
+        ]
+    ],
+    "keywords": [
+        "Honorable Dismissal",
+        "HD",
+        "University Registrar",
+        "Withdrawal",
+        "Debt settlement",
+        "Expulsion",
+        "Disciplinary action",
+        "Academic transcript",
+        "Board of Regents"
+    ]
+    },
+    {
+        "title": "Graduation Requirements",
+        "contents": [
+          [
+            "No student shall be recommended for graduation unless he has satisfied all academic and other requirements prescribed for graduation. Further, a student with provisional admission may only be endorsed for graduation upon submission of complete entrance credentials."
+          ],
+          [
+            "Candidates for graduation who began their studies under a curriculum more than ten (10) years old shall be governed by the following rules:",
+            "1. Those who have completed all the requirements of the curriculum but did not apply for, nor were granted, the corresponding degree or title shall have their graduation approved as of the date they should have originally graduated.",
+            "2. Those who have completed all but two (2) or three (3) subjects required by a curriculum shall be made to follow any of the curricula enforced from the time they first attended the University to the present."
+          ],
+          [
+            "All candidates for graduation must have their deficiencies settled and their records cleared by the end of their last semester in their current degree program. The requirements for graduation include the completion of all academic and non-academic requirements such as submission of bound copies of the thesis, if thesis is required."
+          ],
+          [
+            "The deadlines for completion of requirements for graduation for those graduating as of the end of a particular term are:",
+            "As of the end of the First Semester:",
+            "- day before the first day of regular registration for the second semester",
+            "As of the end of the Second Semester:",
+            "- day before the college/school faculty meeting to decide the graduation of students",
+            "As of the end of the Midyear:",
+            "- day before the first day of regular registration for the first semester",
+            "If some graduation requirements are completed beyond the deadline, the student must register during the succeeding semester to be considered a candidate for graduation as of the end of that semester."
+          ],
+          [
+            "No student shall graduate from the University unless the student has completed at least one (1) year of residence work which may, however, be extended to a longer period by the proper faculty. The student must have been in residence in the semester of graduation."
+          ],
+          [
+            "Students must file formal applications as candidates for graduation with the offices of the Deans of their respective colleges/schools."
+          ],
+          [
+            "No student who fails to pay the required graduation fee within the specified period set by the University Registrar shall be conferred any title or degree. Such a student may, however, upon request and payment of the necessary fees, be given a certified copy of his/her credentials without specifying the completion of the requirements towards any title or degree."
+          ]
+        ],
+        "keywords": [
+          "Graduation Requirements",
+          "Provisional admission",
+          "Curriculum",
+          "Degree",
+          "Deficiencies",
+          "Academic requirements",
+          "Non-academic requirements",
+          "Thesis",
+          "Deadline",
+          "Residence work",
+          "Formal applications",
+          "Graduation fee",
+          "University Registrar",
+          "Certified copy"
+        ]
+    },
+    {
+        "title": "Graduation Requirements",
+        "contents": [
+        [
+            "No student shall be recommended for graduation unless he has satisfied all academic and other requirements prescribed for graduation. Further, a student with provisional admission may only be endorsed for graduation upon submission of complete entrance credentials."
+        ],
+        [
+            "Candidates for graduation who began their studies under a curriculum more than ten (10) years old shall be governed by the following rules:",
+            "1. Those who have completed all the requirements of the curriculum but did not apply for, nor were granted, the corresponding degree or title shall have their graduation approved as of the date they should have originally graduated.",
+            "2. Those who have completed all but two (2) or three (3) subjects required by a curriculum shall be made to follow any of the curricula enforced from the time they first attended the University to the present."
+        ],
+        [
+            "All candidates for graduation must have their deficiencies settled and their records cleared by the end of their last semester in their current degree program. The requirements for graduation include the completion of all academic and non-academic requirements such as submission of bound copies of the thesis, if thesis is required."
+        ],
+        [
+            "The deadlines for completion of requirements for graduation for those graduating as of the end of a particular term are:",
+            "As of the end of the First Semester:",
+            "- day before the first day of regular registration for the second semester",
+            "As of the end of the Second Semester:",
+            "- day before the college/school faculty meeting to decide the graduation of students",
+            "As of the end of the Midyear:",
+            "- day before the first day of regular registration for the first semester",
+            "If some graduation requirements are completed beyond the deadline, the student must register during the succeeding semester to be considered a candidate for graduation as of the end of that semester."
+        ],
+        [
+            "No student shall graduate from the University unless the student has completed at least one (1) year of residence work which may, however, be extended to a longer period by the proper faculty. The student must have been in residence in the semester of graduation."
+        ],
+        [
+            "Students must file formal applications as candidates for graduation with the offices of the Deans of their respective colleges/schools."
+        ],
+        [
+            "No student who fails to pay the required graduation fee within the specified period set by the University Registrar shall be conferred any title or degree. Such a student may, however, upon request and payment of the necessary fees, be given a certified copy of his/her credentials without specifying the completion of the requirements towards any title or degree."
+        ]
+        ],
+        "keywords": [
+        "Graduation Requirements",
+        "Provisional Admission",
+        "Curriculum",
+        "Deficiencies",
+        "Thesis",
+        "Deadlines",
+        "Residence Work",
+        "Graduation Fee"
+        ]
+    },
+    {
+        "title": "Graduation with Honors",
+        "contents": [
+        [
+            "Students who complete their baccalaureate degree with the following absolute minimum weighted average grade shall be graduated with honors:",
+            "Summa cum laude 1.20",
+            "Magna cum laude 1.45",
+            "Cum laude 1.75",
+            "All the grades in all subjects prescribed in the curriculum, as well as subjects that qualify as electives, shall be included in the computation of the weighted average grade."
+        ],
+        [
+            "In cases where electives taken are more than those required in the program, the following procedure would be followed in selecting the electives to be included in the computation of the weighted average grade:",
+            "a. For students who did not shift programs, consider the required number of electives in chronological order.",
+            "b. For students who shifted from one program to another, the electives to be considered shall be selected according to the following order of priority:",
+            "   i. Electives taken in the program where the student is graduating will be selected in chronological order.",
+            "   ii. Electives taken in the previous program and acceptable as electives in the second program will be selected in chronological order.",
+            "   iii. Prescribed courses taken in the previous program but qualify as electives in the second program will be selected in chronological order."
+        ]
+    ]
+    },
+    {
+        "title": "Additional Rules",
+        "contents": [
+          "Students who are candidates for graduation with honors must have completed in the University at least 75% of the total number of academic units or hours for graduation and must have been in residence in the semester of graduation.",
+          "In the computation of the final average of candidates for graduation with honors, only resident credits shall be included.",
+          "Students who are candidates for graduation with honors must have taken during each semester/trimester/quarter not less than 15 units of credit or the normal load prescribed in the curriculum in cases where such normal load is less than 15 units, unless the lighter load was due to justifiable causes such as health reasons, the unavailability of courses needed in the curriculum to complete the full load, there are no more courses that can be taken based on the curriculum, or the fact that the candidate is a working student or enrolled in a foreign university as a cross-registered student. To justify underloading, the submission of pertinent documents is required, as follows:",
+            [
+              "For health reasons - medical certification to be confirmed by the University Health Service.",
+              "For unavailability of courses - certification by the major adviser and copy of schedule of classes.",
+              "For employment - copy of payroll and appointment papers indicating, among others, duration of employment."
+            ],
+          "It is the responsibility of the student to establish beyond reasonable doubt the veracity of the cause(s) of the light loading. It is required in this connection that documents submitted to establish the cause(s) of his/her loading, such as certificate of employment and/or medical certificate, must be sworn to. These documents must be submitted during the semester of underloading.",
+          "For UPV, students who are candidates for graduation with honors must have no grade of '4' or '5' in all courses prescribed by the program."
+        ],
+        "keywords": [
+          "Graduation with Honors",
+          "Academic Units",
+          "Residence",
+          "Final Average",
+          "Resident Credits",
+          "Course Load",
+          "Underloading",
+          "Health Reasons",
+          "Unavailability of Courses",
+          "Employment",
+          "Justification Documents",
+          "UPV"
+        ]
+    }, 
+    {
+        "title": "Commencement Exercises",
+        "contents": [
+            "Attendance at general commencement exercises shall be optional. Graduating students who choose not to participate in the general commencement exercises must inform their respective deans or their duly designated representatives at least ten (10) days before the commencement exercises.",
+            "Graduating students who absent themselves from the general commencement exercises shall obtain their diplomas, or certificates, and transcript of records from the OUR provided that they comply with the above provision and upon presentation of the receipt of payment of the graduation fee and student's clearance.",
+            {
+            "title": "Academic Costumes",
+            "content": "Candidates for graduation with degrees or titles which require no less than four (4) years of collegiate instruction shall be required to wear academic costumes during the baccalaureate service and commencement exercises in accordance with the rules and regulations of the University. The University now uses the Sablay in place of the cap and gown or the graduation toga. It should be used only during academic functions and activities. Formal clothing should be worn with the Sablay as a sign of respect, it being the official academic costume of the University, and to preserve the solemnity and dignity of the occasions when it is worn."
+            }
+        ],
+        "keywords": [
+            "Commencement Exercises",
+            "Attendance",
+            "Diplomas",
+            "Certificates",
+            "Transcript of Records",
+            "Graduation Fee",
+            "Academic Costumes",
+            "Sablay",
+            "Collegiate Instruction",
+            "Formal Clothing"
+        ]
+    }
+    
+    
+    
+    
+    
+    
+
+
 ]

@@ -1,3 +1,18 @@
+.logout-links{
+    display: flex;
+    gap: 5px;
+    color: white;
+}
+.logout-btn{
+    text-decoration: none;
+    color: white;
+}
+.logout-btn:hover{
+    color: #D6EEEE;
+    text-decoration: underline;
+}
+
+
 
 body{
     margin-top:20px;

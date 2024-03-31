@@ -54,12 +54,14 @@ html,body {
 .login-links {
     display: flex;
     justify-content: flex-end; /* Align login links to the right */
+    padding: 5px;
+    color: white;
 }
 
 .logins {
     text-decoration: none;
     color: white;
-    margin-left: 10px; /* Add space between login links (optional) */
+    margin-left: 3px; /* Add space between login links (optional) */
 }
 
 .home-img {
