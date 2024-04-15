@@ -35,8 +35,8 @@ body{
      padding-bottom: 0!important;
  }
  
- tr:nth-child(odd) {
-    background-color: #D6EEEE;
+ tr {
+    border-bottom: 1px solid #D6EEEE;
   }
 
 
