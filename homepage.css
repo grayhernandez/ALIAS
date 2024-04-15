@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 *{
-    font-family: Montserrat;
+    font-family: Inter, sans-serif;
     box-sizing: border-box;
     margin: 0%;
 }
@@ -10,7 +10,7 @@ html,body {
     margin:0px;
     padding:0px;
     overflow-x: hidden;
-
+    scroll-behavior: smooth;
 }
 
 .main-header {

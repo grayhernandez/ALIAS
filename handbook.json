@@ -206,37 +206,29 @@
             "The University gives no credit for any course taken by any of its students in any other university, college, or school unless the taking of such course was expressly authorized by the University Registrar on the recommendation of the Dean concerned. [E.O. No. 1 dated 13 March 1984; EO No. 2 dated 14 March 1984; Memorandum FN 90-12 dated 07 March 1990] The authorization shall be in writing to be recorded by the University Registrar or by the student’s representative and shall speciﬁcally describe the subjects authorized.",
             "Courses taken outside the University are subject to validation. Courses taken in a foreign university during student mobility will not be included in the computation of the Curriculum Weighted Average Grade (CWAG) / General Weighted Average Grade (GWA)."
         ],
-        "keywords":[]
+        "keywords":["cross registration", "to another institution", "student mobility", "foreign university", "foreign country", "foreign"]
     },
     {
         "title": "CROSS REGISTRATION: From another institution",
         "contents": [
             "No student registered in any other institution shall be admitted to the University without a written permit from his/her Dean, Director, or Registrar. The permit shall state the total number of units for which the student is registered and the subjects that he/she is authorized to take in the University. Admission is subject to availability of slots and must have the approval of the Dean of the unit concerned."
         ],
-        "keywords":[]
+        "keywords":["cross registration", "from another institution", "student mobility"] 
     },
     {
         "title": "Waiver of Prerequisites",
         "contents": [
-        [
-            "Courses approved by the University Council as prerequisites to other courses may not be waived.",
-            "However, in meritorious cases, a student who has previously enrolled and fully attended in a course that is prerequisite to another may be allowed to enroll and attend the latter course for credit, without having passed or earned credit for the prerequisite course."
-        ],
-        [
-            "No permission shall be granted by the college/school except upon application by the student.",
-            "The application shall be accompanied by certifications from the (1) student's instructor in the prerequisite course that the student had fully attended said course and (2) Director of the Office of Student Affairs that the student's failure to pass or earn credit in the prerequisite course was not due to disciplinary action imposed upon the student."
-        ],
-        [
-            "Each college shall be authorized to grant the permission and shall act through a Dean’s Committee, which shall determine the merit of the application.",
-            "The Committee shall include the college secretary."
-        ],
-        [
-            "The student who is granted permission under these rules is required to enroll in the prerequisite course simultaneously with the course to which it is a prerequisite, or immediately in the next semester."
-        ],
-        [
-            "The permission which may be granted under these rules does not apply to courses in the General Education Program.",
-            "Waiver of prerequisite for a course that was dropped by the student in their own volition is not allowed."
-        ]
+        
+            "Courses approved by the University Council as prerequisites to other courses may not be waived. However, in meritorious cases, a student who has previously enrolled and fully attended in a course that is prerequisite to another may be allowed to enroll and attend the latter course for credit, without having passed or earned credit for the prerequisite course.",
+        
+            "No permission shall be granted by the college/school except upon application by the student. The application shall be accompanied by certifications from the (1) student's instructor in the prerequisite course that the student had fully attended said course and (2) Director of the Office of Student Affairs that the student's failure to pass or earn credit in the prerequisite course was not due to disciplinary action imposed upon the student.",
+        
+            "Each college shall be authorized to grant the permission and shall act through a Dean's Committee, which shall determine the merit of the application. The Committee shall include the college secretary.",
+        
+            "The student who is granted permission under these rules is required to enroll in the prerequisite course simultaneously with the course to which it is a prerequisite, or immediately in the next semester.",
+        
+            "The permission which may be granted under these rules does not apply to courses in the General Education Program. Waiver of prerequisite for a course that was dropped by the student in their own volition is not allowed."
+        
         ],
         "keywords": [
         "Waiver of Prerequisites",

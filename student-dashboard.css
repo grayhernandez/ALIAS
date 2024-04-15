@@ -6,6 +6,7 @@
 .logout-btn{
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 .logout-btn:hover{
     color: #D6EEEE;

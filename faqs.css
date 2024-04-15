@@ -15,6 +15,7 @@
     border: 1px solid #ccc; /* Add border for visual separation */
     background-color: #f9f9f9; /* Add background color for better visibility */
     max-height: 80px; /* Limit the height of the container */
+    width: 1200px; /* Set the width to fit the content */
     overflow: hidden; /* Hide overflow content */
 }
 
@@ -24,16 +25,15 @@
     text-overflow: ellipsis; /* Display ellipsis for truncated content */
 }
 
-
-
 .result-container {
     flex:1;
-    padding: 10px;
+    padding: 30px;
     margin: 100px;
     border-radius: 10px;
     border: 1px solid #ccc; /* Add border for visual separation */
     background-color: #f9f9f9; /* Add background color for better visibility */
-
+    text-align: justify;
+    
 }
 
 
