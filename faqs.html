@@ -144,7 +144,7 @@
             ]);
         
             const pagination = instantsearch.widgets.panel({
-                hidden: ({ results }) => results.nbPages < 2,
+                hidden: ({results }) => results.nbPages < 2,
             })(instantsearch.widgets.pagination);
         
             search.addWidget(

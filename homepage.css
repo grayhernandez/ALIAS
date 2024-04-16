@@ -112,10 +112,11 @@ html,body {
 
 
 .footer-contents{
+    margin-top: 25px;
     background-color: gray;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
+    padding: 10px;
 }
 .footer-contents .nav-link,
 .footer-contents .text-body-secondary {

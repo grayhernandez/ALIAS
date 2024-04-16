@@ -52,4 +52,4 @@ async function signIn() {
     });
 }
 
-document.getElementById("login").addEventListener("click", signIn);
+document.getElementById("google").addEventListener("click", signIn);

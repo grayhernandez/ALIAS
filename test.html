@@ -36,47 +36,78 @@
             </div>
 
             <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            Main Accordion Item #1
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-            
-                            <div class="accordion" id="sub-accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="sub-headingOne">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="false" aria-controls="sub-collapseOne">
-                                            Accordion Item #1
-                                        </button>
-                                    </h2>
-                                    <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionExample">
-                                        <div class="accordion-body">
-                                            <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="sub-headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="false" aria-controls="sub-collapseTwo">
-                                            Accordion Item #2
-                                        </button>
-                                    </h2>
-                                    <div id="sub-collapseTwo" class="accordion-collapse collapse" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionExample">
-                                        <div class="accordion-body">
-                                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                        </div>
-                                    </div>
-                                </div>
+                <script>
+                  function createAccordionItem(title, subItems) {
+                        // Generate HTML for accordion item with title and sub-accordions
+                        const item = document.createElement('div');
+                        item.classList.add('accordion-item');
+
+                        // Create accordion title
+                        const titleElement = document.createElement('h2');
+                        titleElement.classList.add('accordion-header');
+                        titleElement.innerHTML = `
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#${title.toLowerCase().replace(/\s/g, '-')}" aria-expanded="true" aria-controls="${title.toLowerCase().replace(/\s/g, '-')}">
+                                ${title}
+                            </button>
+                        `;
+                        item.appendChild(titleElement);
+
+                        // Create accordion content
+                        const contentElement = document.createElement('div');
+                        contentElement.classList.add('accordion-collapse', 'collapse');
+                        contentElement.id = title.toLowerCase().replace(/\s/g, '-');
+                        const contentContainer = document.createElement('div');
+                        contentContainer.classList.add('accordion-body');
+                        
+                        // Loop through subItems to create sub-accordion items
+                        subItems.forEach(subItem => {
+                            const subAccordionItem = createSubAccordionItem(subItem.title, subItem.content);
+                            contentContainer.appendChild(subAccordionItem);
+                        });
+
+                        contentElement.appendChild(contentContainer);
+                        item.appendChild(contentElement);
+
+                        return item;
+                    }
+
+                    function createSubAccordionItem(title, content) {
+                        // Generate HTML for sub-accordion item with title and content
+                        const subItem = document.createElement('div');
+                        subItem.classList.add('accordion-item');
+
+                        const subAccordionHeader = document.createElement('h3');
+                        subAccordionHeader.classList.add('accordion-header');
+                        subAccordionHeader.innerHTML = `
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${title.toLowerCase().replace(/\s/g, '-')}-content" aria-expanded="false" aria-controls="${title.toLowerCase().replace(/\s/g, '-')}-content">
+                                ${title}
+                            </button>
+                        `;
+                        subItem.appendChild(subAccordionHeader);
+
+                        const subAccordionContent = document.createElement('div');
+                        subAccordionContent.classList.add('accordion-collapse', 'collapse');
+                        subAccordionContent.id = `${title.toLowerCase().replace(/\s/g, '-')}-content`;
+                        subAccordionContent.setAttribute('aria-labelledby', `${title.toLowerCase().replace(/\s/g, '-')}`);
+                        subAccordionContent.innerHTML = `
+                            <div class="accordion-body">
+                                ${content}
                             </div>
-                        </div>
-                    </div>
-            
-                </div>
-</div>
-</div>
+                        `;
+                        subItem.appendChild(subAccordionContent);
+
+                        return subItem;
+                    }
+
+                    const accordion = document.getElementById('accordionExample');
+                    // Call the function to generate Enrollment and Others sections
+                    accordion.append(createAccordionItem('Enrollment', enrollmentSubItems));
+                    accordion.append(createAccordionItem('Others', othersSubItems));
+                </script>
+                
+            </div>
+        </div> 
+
             
         <!-- Footer -->
         <div class ="footer-contents">
@@ -95,7 +126,7 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
-
+        <script src="./test.js" type="module"></script>
 
     </body>
 </html>
