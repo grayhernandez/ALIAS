@@ -1,0 +1,169 @@
+[
+    {
+        "question": "What is ALIAS?",
+        "answer": [
+            "Automated Learning and Interactive Advising System is a web-based application that allows students to learn and advise using a personalized learning environment."
+        ],
+        "keywords": ["Automated Learning and Interactive Advising System", "ALIAS"]
+    },
+    {
+        "question": "Who can use ALIAS?",
+        "answer": [
+            "Students and faculty in the university."
+        ],
+        "keywords": ["Students and faculty in the university", "ALIAS"]
+    },
+    {
+        "question": "What are the delivery modes for Academic Year 2023-2024?",
+        "answer": [
+            "Blended online learning (Model 1) is fully online, combining asynchronous and synchronous online learning.",
+            "Blended block learning (Model 2) combines blocks of independent online study and intensive f2f sessions.",
+            "Classic blended learning (Model 3) alternates or rotates f2f sessions and asynchronous online learning."
+            ],
+        "keywords": ["blended learning", "online learning", "block learning", "asynchronous online learning", "Model 1", "Model 2", "Model 3"]
+    },
+    {
+        "question": "How to enroll?",
+        "answer": [
+            ["A student must be officially registered in order to receive credit for course work. The official registration form (UP Form 5) which is a record of classes for which the student has enrolled in is filed in the Office of the University Registrar. [UP Diliman Academic Information 1997; Confirmed: 682nd EC meeting, 20 March 1978 and 683rd EC meeting.]"],
+            ["No student shall be registered in any subject after one week of regular class meetings have been held, unless the Dean, on the basis of his scholastic record, permits his registration; Provided, that if registration is made outside the regular registration period indicated in the University calendar the student shall be subject to fine for late registration; Provided, further, that special students may register at any time without the payment of fine for late registration subject to other regulations of the University. Students may register for particular subject within a semester when permissible under the system of instruction adopted by the college. [Art 332, as amended at the 232nd UC meeting, 4 May 1967]."],
+            ["No fine for Late Registration shall be collected. [Memorandum No. PERR 06-22]"], 
+            ["Late Registration period shall no longer be observed. However, Chancellors are enjoined to allow a reasonable amount of time for registration. [1213th BOR meeting, 29 September 2006]"],
+            ["In UPV, there will be no provision for Late Registration in the academic calendar. [79th EC meeting, 09 December 2011"],
+            ["Please refer to this link for a complete process: https://crs.upv.edu.ph/views/online%20process/Flowchart-Registration.pdf"]
+        ],
+        "keywords":["enrollment", "registration", "Form 5"]
+    },
+    {
+        "question": "How to change matriculation?",
+        "answer": ["Matriculation changes are only permitted for valid reasons. It is important to note that after the first week of regular class meetings, changes in matriculation that involve enrolling in a new subject are not permitted. The request for a change in matriculation must be recommended by the adviser and subsequently approved by the Dean."],
+        "keywords": ["change of matriculation", "matriculation", "enrollment", "registration", "Form 5"]
+
+    },
+    {
+        "question": "How to remove INC/4.0?",
+        "answer": [
+            "Examinations for the removal of grades of INC and 4 may be taken without fee: (1) during the regular examination periods, if the subject in which a student failed to take his final examination is included in the schedule of examination for the period during which said removal examination is to be taken otherwise, said student is to be charged the required fee; (2) during the removal examination period, viz, the period covering ten days preceding the registration in each semester, provided that the examination is taken at the time that it is scheduled; and (3) within the ten-day period preceding the Christmas vacation in colleges in which there is no intersemester  vacation, provided that the examination is taken at the time it is scheduled.",
+            "There shall be a regular period for removing grades of 4 and INC. before the start of each semester. Such a grade may no longer be improved after the end of the third regular removal period immediately following the semester/term in which the grade was incurred. A grade of 4 received after removing a grade of INC., however, must be removed within the remaining portion of the prescribed period for the removal of the original grade of INC. [Art 378 as amended at the 886th BOR meeting, 28 April 1977]. See Figure 10 for the submission of completion grade flowchart.",
+            "Examination for the removal of grades of “incomplete” may be taken without fee:",
+            [
+                "“…during the regular examination periods” ",
+                "“…the period covering ten days preceding the registration in each semester.”",
+                "“…within the ten-day period preceding the Christmas vacation in colleges in which there is no inter-semester vacation….” [ Art. 377, UP Code 1975]"
+            ],
+            "NOTES:",
+            [
+                "The student must be required to present a completion/removal permit before he/she is given an examination or allowed to submit requirements for completion.",
+                "The faculty must submit removal or completion grade one week after the examination or submission of all requirements of the course. The faculty shall submit the completion grade through CRS and send the hardcopy later.",
+                "A student who is not officially enrolled at the time when he/she decides to take the removal exam or to comply the requirements shall be advised to pay the registration fee before he/she is given an examination or allowed to submit requirements for completion"
+            ]
+        ],
+        "keywords": ["INC", "4.0", "removal of grades", "removal of grades of 4", "removal of grades of INC", "removal of grades of “incomplete”"]
+    },
+    {
+        "question": "What are the requirements for Latin Honors?",
+        "answer": [
+            "Students who complete their baccalaureate degree with the following absolute minimum weighted average grade shall be graduated with honors:",
+            [
+                "Summa cum laude: 1.20",
+                "Magna cum laude: 1.45",
+                "Cum laude: 1.75"
+            ],
+            "All the grades in all subjects prescribed in the curriculum, as well as subjects that qualify as electives, shall be included in the computation of the weighted average grade.",
+            "In cases where electives taken are more than those required in the program, the following procedure would be followed in selecting the electives to be included in the computation of the weighted average grade:",
+            "a. For students who did not shift programs, consider the required number of electives in chronological order.",
+            "b. For students who shifted from one program to another, the electives to be considered shall be selected according to the following order of priority:",
+            [
+                "   i. Electives taken in the program where the student is graduating will be selected in chronological order.",
+                "   ii. Electives taken in the previous program and acceptable as electives in the second program will be selected in chronological order.",
+                "   iii. Prescribed courses taken in the previous program but qualify as electives in the second program will be selected in chronological order."
+            ]
+        ],
+        "keywords": ["Latin Honors", "Summa cum laude", "Magna cum laude", "Cum laude"]
+    },
+    {
+        "question": "What are the requirements for graduation?",
+        "answer": [
+            [
+                "No student shall be recommended for graduation unless he has satisfied all academic and other requirements prescribed for graduation. Further, a student with provisional admission may only be endorsed for graduation upon submission of complete entrance credentials."
+            ],
+            [
+                "Candidates for graduation who began their studies under a curriculum more than ten (10) years old shall be governed by the following rules:",
+                "1. Those who have completed all the requirements of the curriculum but did not apply for, nor were granted, the corresponding degree or title shall have their graduation approved as of the date they should have originally graduated.",
+                "2. Those who have completed all but two (2) or three (3) subjects required by a curriculum shall be made to follow any of the curricula enforced from the time they first attended the University to the present."
+            ],
+            [
+                "All candidates for graduation must have their deficiencies settled and their records cleared by the end of their last semester in their current degree program. The requirements for graduation include the completion of all academic and non-academic requirements such as submission of bound copies of the thesis, if thesis is required."
+            ],
+            [
+                "The deadlines for completion of requirements for graduation for those graduating as of the end of a particular term are:",
+                "As of the end of the First Semester:",
+                "- day before the first day of regular registration for the second semester",
+                "As of the end of the Second Semester:",
+                "- day before the college/school faculty meeting to decide the graduation of students",
+                "As of the end of the Midyear:",
+                "- day before the first day of regular registration for the first semester",
+                "If some graduation requirements are completed beyond the deadline, the student must register during the succeeding semester to be considered a candidate for graduation as of the end of that semester."
+            ],
+            [
+                "No student shall graduate from the University unless the student has completed at least one (1) year of residence work which may, however, be extended to a longer period by the proper faculty. The student must have been in residence in the semester of graduation."
+            ],
+            [
+                "Students must file formal applications as candidates for graduation with the offices of the Deans of their respective colleges/schools."
+            ],
+            [
+                "No student who fails to pay the required graduation fee within the specified period set by the University Registrar shall be conferred any title or degree. Such a student may, however, upon request and payment of the necessary fees, be given a certified copy of his/her credentials without specifying the completion of the requirements towards any title or degree."
+            ]
+        ],
+        "keywords": [
+            "Graduation Requirements",
+            "Provisional Admission",
+            "Curriculum",
+            "Deficiencies",
+            "Thesis",
+            "Deadlines",
+            "Residence Work",
+            "Graduation Fee"
+            ]
+    },
+    {
+        "question": "What is Probation?",
+        "answer": [
+            "Any student who, at the end of the semester, obtains final grades below “3” in 50% to 75% of the total number of academic units in which the student has final grades shall be placed on probation for the succeeding semester and his/her load shall be limited to the extent to be determined by the Dean. Probation may be removed by passing with grades of “3” or better in more than 50% of the units in which the student has final grades in the succeeding semester.",
+            "Any student on probation in accordance with the preceding rule who again fails in 50% or more of the total number of units in which he/she receives final grades shall be dropped from the rolls of his/her college or school."
+        ],
+        "keywords": ["Probation", "Removing Probation"]
+    },
+    {
+        "question": "What is Warning?",
+        "answer":[
+            "Any student who obtains final grades at the end of the semester below “3” in 25% to 49% of the total number of academic units for which the student is registered will receive a warning from the Dean to improve his/her work."
+        ],
+        "keywords":["Warning", "Removing Warning"]
+    },
+    {
+        "question": "What is Permanent Disqualification?",
+        "answer":[
+            "Any student who, at the end of the semester or term, obtains final grades below “3” in 100% of the academic units in which he/she is given final grades shall be permanently barred from readmission to any college or school of the University.",
+            "Permanent disqualification does not apply to cases where, on recommendation of the instructors concerned, the faculty certifies that the grades of “5” were due to the student's unauthorized dropping of the subjects and not to poor scholarship. However, if the unauthorized withdrawal takes place after the mid-semester and the student's class standing is poor, the grade of “5” shall be counted against the student for the purpose of this scholarship rule. The Dean shall deal with these cases on their individual merits in the light of the recommendations of the Director of the Office of Student Affairs; Provided that in no case of readmission to the same or another college or school shall the action be lighter than probation."
+        ]
+    },
+    {
+        "question": "What is Honorable Dismissal?",
+        "answer":[
+            "Any student who, at the end of the semester, obtains final grades below “3” in more than 75% but less than 100% of the total number of academic units in which he/she receives final grades shall be dropped from the rolls of the college/school.",
+            "Any student who was dropped in accordance with the rules on Dismissal and again fails so that it becomes necessary again to drop the student, shall not be eligible for readmission to any college or school of the University."
+        ],
+        "keywords": ["Honorable Dismissal", "Removing Honorable Dismissal"]
+    },
+    {
+        "question": "What are the requirements for Probation?"
+    },
+    {
+        "question": "What are the requirements for Probation?"
+    },
+    {
+        "question": "What are the requirements for Probation?"
+    }
+
+]

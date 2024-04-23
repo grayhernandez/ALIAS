@@ -26,6 +26,7 @@
             integrity="sha256-p/rGN4RGy6EDumyxF9t7LKxWGg6/MZfGhJM/asKkqvA="
             crossorigin="anonymous"
         />
+
     </head>
     <body>
         <!-- Header -->
@@ -50,6 +51,7 @@
                 </span>
             </div>
         </header>
+
         <div class="ais-InstantSearch">
             <div class="right-panel">
                 <div class="p-2 p-md-3 mb-1 text-center">
@@ -63,7 +65,7 @@
                 <div id="pagination"></div>
             </div>
         </div>
-        
+
         <script>
             document.getElementById('search-button').addEventListener('click', () => {
                 const searchQuery = document.getElementById('search-input').value;
@@ -156,24 +158,74 @@
             search.start();
         </script>
         
+        <section class="popular-articles">
+            <div class="container">
+                <div>
+                    <h2><i class="fas fa-fire"></i>Popular Articles</h2>
+                    <ol class="popular-articles-list">
+                        
+                            <li class="article">
+                                <a href="/en_GB/expense-and-reports-%E2%80%93-administrator-/how-does-the-system-work-if-you-have-multiple-integrations" id="1611443" class="article-title" style="--check-position: 0;">How does the system work if you have 
+        multiple integrations?</a>
+                            </li>
+                        
+                            <li class="article">
+                                <a href="/en_GB/other-%E2%80%93-administrator-/is-there-a-balancing-report-that-i-can-download-in-the-system" id="1617779" class="article-title" style="--check-position: 0;">Is there a balancing report that I can download in the system?</a>
+                            </li>
+                        
+                            <li class="article">
+                                <a href="/en_GB/settings-%E2%80%93-administrator-/how-do-i-manage-users" id="1488810" class="article-title" style="--check-position: 0;">How do I manage users?</a>
+                            </li>
+                        
+                            <li class="article">
+                                <a href="/en_GB/expense-and-reports-%E2%80%93-users-/how-do-i-add-an-expense" id="1488792" class="article-title" style="--check-position: 0;">How do I add an expense?</a>
+                            </li>
+                        
+                    </ol>
+                </div>
+                <div>
+                    <h2><i class="fas fa-fire"></i>New Articles</h2>
+                    <ol class="popular-articles-list recent_updates-list">
+                        
+                            <li class="article">
+                                <a href="/en_GB/other/tax-regulations-2024" id="2338131" class="article-title" style="--check-position: -37px;">Tax regulations 2024</a>
+                            </li>
+                        
+                            <li class="article">
+                                <a href="/en_GB/settings-%E2%80%93-administrator-/how-do-we-add-report-groups-under-the-tab-ready-to-send-" id="2495011" class="article-title" style="--check-position: -37px;">How do we add report groups under the tab "Ready to send"? </a>
+                            </li>
+                        
+                            <li class="article">
+                                <a href="/en_GB/other/what-do-the-different-user-types-mean-and-what-is-the-difference-between-them" id="2478717" class="article-title" style="--check-position: -324.234375px;">What do the different user types mean and what is the difference between them?</a>
+                            </li>
+                        
+                            <li class="article">
+                                <a href="/en_GB/get-started-%E2%80%93-users-/im-a-new-user-how-do-i-get-started-" id="1735049" class="article-title" style="--check-position: -324.234375px;">I'm a new user. How do I get started? </a>
+                            </li>
+                        
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Footer -->
-        <div class ="footer-contents">
-            <footer class="py-3 my-4">
+        <div class ="footer-contents mt-0">
+            <footer class="py-1 my-2">
                 <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">HOME</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">ABOUT</a></li>
-                    <li class="nav-item"><a href="https://crs.upv.edu.ph/" class="nav-link px-2 text-body-secondary">UPV CRS</a></li>
-                    <li class="nav-item"><a href="https://www.facebook.com/UPVKomsai.Org/" class="nav-link px-2 text-body-secondary">UPV KOMSAI.ORG</a></li>
-                    <li class="nav-item"><a href="https://www.facebook.com/UPVStatSoc" class="nav-link px-2 text-body-secondary">STATISTICAL SOCIETY</a></li>
-                    <li class="nav-item"><a href="https://www.facebook.com/UPVMathCircle" class="nav-link px-2 text-body-secondary">MATH-O</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">HOME</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">ABOUT</a></li>
+                <li class="nav-item"><a href="https://crs.upv.edu.ph/" class="nav-link px-2 text-body-secondary">UPV CRS</a></li>
+                <li class="nav-item"><a href="https://www.facebook.com/UPVKomsai.Org/" class="nav-link px-2 text-body-secondary">UPV KOMSAI.ORG</a></li>
+                <li class="nav-item"><a href="https://www.facebook.com/UPVStatSoc" class="nav-link px-2 text-body-secondary">STATISTICAL SOCIETY</a></li>
+                <li class="nav-item"><a href="https://www.facebook.com/UPVMathCircle" class="nav-link px-2 text-body-secondary">MATH-O</a></li>
                 </ul>
-                <p class="text-center text-body-secondary">© Floyd Russel C. Hernandez, 2023</p>
+                <p class="text-center text-body-secondary pt-3 mt-3">© Floyd Russel C. Hernandez, 2023</p>
             </footer>
         </div>
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
-
 
     </body>
 </html>
