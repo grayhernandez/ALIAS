@@ -112,7 +112,7 @@
                     console.log('Content:', object);
                     let contentHTML = '';
 
-                    for (const content of object.contents) {
+                    for (const content of object.answer) {
                         if (typeof(content) ==='string') {
                             contentHTML += `<p>${content}</p>`;
                         } else {
@@ -129,7 +129,7 @@
                     resultContent.innerHTML = `
                         <div class="result-container">
                             <a href="faqs.html" class="back">Back to FAQs</a>
-                            <h1 style="text-align: center">${object.title}</h1>
+                            <h1 style="text-align: center">${object.question}</h1>
                             <p>${contentHTML}</p>
                         </div>
                     `;

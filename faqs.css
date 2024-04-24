@@ -5,6 +5,11 @@
 
 }
 
+#searchbox{
+    max-width: 500px auto;
+    margin: 30px auto;
+}
+
 .search button:hover {
     background-color: #00034C;
 }

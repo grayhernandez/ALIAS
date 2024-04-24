@@ -98,7 +98,21 @@
                         });
                     }
         
-                    return algoliaClient.search(requests);
+                    return algoliaClient.search(requests)
+                    .then(response => {
+                        // Check if there are no hits
+                        if (response.results && response.results.length > 0 && response.results[0].hits.length === 0) {
+                            // No similar words found, display error message
+                            // You can display an error message to the user here
+                            document.getElementById("hits").innerHTML = `<p style="text-align: center">No similar words found. Please try another search term or contact your program adviser.</p>`
+                        }
+                        return response; // Return the response for further processing
+                    })
+                    .catch(error => {
+                        console.error("Error:", error); // Log the error for debugging
+                        // Display a user-friendly message to the user
+                        return { results: [] }; // Return an empty results object in case of error
+                    });
                 },
             };
         
@@ -123,13 +137,13 @@
                                     <div class="results-container"> <!-- Container box for each hit -->
                                         <h2>
                                             ${components.Highlight({
-                                                attribute: 'title',
+                                                attribute: 'question',
                                                 hit,
                                             })}
                                         </h2>
                                         <p class="truncated-content"> <!-- Use a class for the truncated content -->
                                             ${components.Highlight({
-                                                attribute: 'contents', 
+                                                attribute: 'answer', 
                                                 hit,
                                             })}
                                         </p>
@@ -158,52 +172,54 @@
             search.start();
         </script>
         
-        <section class="popular-articles">
-            <div class="container">
-                <div>
-                    <h2><i class="fas fa-fire"></i>Popular Articles</h2>
-                    <ol class="popular-articles-list">
-                        
-                            <li class="article">
-                                <a href="/en_GB/expense-and-reports-%E2%80%93-administrator-/how-does-the-system-work-if-you-have-multiple-integrations" id="1611443" class="article-title" style="--check-position: 0;">How does the system work if you have 
-        multiple integrations?</a>
-                            </li>
-                        
-                            <li class="article">
-                                <a href="/en_GB/other-%E2%80%93-administrator-/is-there-a-balancing-report-that-i-can-download-in-the-system" id="1617779" class="article-title" style="--check-position: 0;">Is there a balancing report that I can download in the system?</a>
-                            </li>
-                        
-                            <li class="article">
-                                <a href="/en_GB/settings-%E2%80%93-administrator-/how-do-i-manage-users" id="1488810" class="article-title" style="--check-position: 0;">How do I manage users?</a>
-                            </li>
-                        
-                            <li class="article">
-                                <a href="/en_GB/expense-and-reports-%E2%80%93-users-/how-do-i-add-an-expense" id="1488792" class="article-title" style="--check-position: 0;">How do I add an expense?</a>
-                            </li>
-                        
-                    </ol>
-                </div>
-                <div>
-                    <h2><i class="fas fa-fire"></i>New Articles</h2>
-                    <ol class="popular-articles-list recent_updates-list">
-                        
-                            <li class="article">
-                                <a href="/en_GB/other/tax-regulations-2024" id="2338131" class="article-title" style="--check-position: -37px;">Tax regulations 2024</a>
-                            </li>
-                        
-                            <li class="article">
-                                <a href="/en_GB/settings-%E2%80%93-administrator-/how-do-we-add-report-groups-under-the-tab-ready-to-send-" id="2495011" class="article-title" style="--check-position: -37px;">How do we add report groups under the tab "Ready to send"? </a>
-                            </li>
-                        
-                            <li class="article">
-                                <a href="/en_GB/other/what-do-the-different-user-types-mean-and-what-is-the-difference-between-them" id="2478717" class="article-title" style="--check-position: -324.234375px;">What do the different user types mean and what is the difference between them?</a>
-                            </li>
-                        
-                            <li class="article">
-                                <a href="/en_GB/get-started-%E2%80%93-users-/im-a-new-user-how-do-i-get-started-" id="1735049" class="article-title" style="--check-position: -324.234375px;">I'm a new user. How do I get started? </a>
-                            </li>
-                        
-                    </ol>
+        <section class="faq-articles">
+            <div class="container p-4">
+                <div class="row" >
+                    <div class="col">
+                        <h2>Popular Articles</h2>
+                        <div class="col-xs-2-12">
+                            <ol class="popular-articles-list" >
+                            
+                                <li class="article">
+                                    <a href="/faqs-result.html?hitId=27d4af765a962_dashboard_generated_id" id="27d4af765a962" class="article-title" style="--check-position: 0;">What is ALIAS?</a>
+                                </li>
+    
+                                <li class="article">
+                                    <a href="/faqs-result.html?hitId=2d5626ac97a4b_dashboard_generated_id" id="2d5626ac97a4b" class="article-title" style="--check-position: 0;">How to enroll?</a>
+                                </li>
+                            
+                                <li class="article">
+                                    <a href="/faqs-result.html?hitId=1ed0586e08a2a1_dashboard_generated_id" id="1ed0586e08a2a1" class="article-title" style="--check-position: 0;">What are the requirements for Latin Honors?</a>
+                                </li>
+                            
+                                <li class="article">
+                                    <a href="/faqs-result.html?hitId=1a2dca2b6e9a17_dashboard_generated_id" id="1a2dca2b6e9a17" class="article-title" style="--check-position: 0;">What are the requirements for graduation?</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>New Articles</h2>
+                        <ol class="popular-articles-list recent_updates-list">
+                            
+                                <li class="article">
+                                    <a href="/en_GB/other/tax-regulations-2024" id="2338131" class="article-title" style="--check-position: -37px;">Tax regulations 2024</a>
+                                </li>
+                            
+                                <li class="article">
+                                    <a href="/en_GB/settings-%E2%80%93-administrator-/how-do-we-add-report-groups-under-the-tab-ready-to-send-" id="2495011" class="article-title" style="--check-position: -37px;">How do we add report groups under the tab "Ready to send"? </a>
+                                </li>
+                            
+                                <li class="article">
+                                    <a href="/en_GB/other/what-do-the-different-user-types-mean-and-what-is-the-difference-between-them" id="2478717" class="article-title" style="--check-position: -324.234375px;">What do the different user types mean and what is the difference between them?</a>
+                                </li>
+                            
+                                <li class="article">
+                                    <a href="/en_GB/get-started-%E2%80%93-users-/im-a-new-user-how-do-i-get-started-" id="1735049" class="article-title" style="--check-position: -324.234375px;">I'm a new user. How do I get started? </a>
+                                </li>
+                            
+                        </ol>
+                    </div>
                 </div>
             </div>
         </section>
