@@ -208,3 +208,11 @@ body{
      background-color: #fff;
      border: 2px solid #038edc
  }
+
+ .sidebar{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #00034C;
+ }

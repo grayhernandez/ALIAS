@@ -41,7 +41,9 @@ function getUserData(userID) {
             const data = result.data();
             console.log(data);
 
-            document.getElementById("picture").src = data.image;
+            if (data.image){
+              document.getElementById("picture").src = data.image;
+            }
             document.getElementById("full-name").innerHTML = data.name;
             document.getElementById("deg-prog").innerHTML = data.degProg;
             document.getElementById("student-num").innerHTML = data.studentNum;

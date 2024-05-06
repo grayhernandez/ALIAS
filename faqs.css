@@ -5,14 +5,34 @@
 
 }
 
+.ais-SearchBox-input {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
 #searchbox{
     max-width: 500px auto;
     margin: 30px auto;
+    border: 1px solid #00034C;
+    border-radius: 8px;
+}
+
+#searchbox:hover{
+    box-shadow: 0 1px 4px 0;
 }
 
 .search button:hover {
     background-color: #00034C;
 }
+
+.loading-gif {
+    display: block;
+    margin: 0 auto;
+    width: 50%; /* Adjust width as needed */
+    max-width: 200px; /* Optional: Set a maximum width */
+  }
+  
+
 .results-container {
     padding: 10px;
     margin: 10px;
@@ -40,6 +60,3 @@
     text-align: justify;
     
 }
-
-
-

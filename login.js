@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
-import { getAuth,  GoogleAuthProvider,signInWithPopup } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
+import { getAuth,  GoogleAuthProvider,signInWithPopup, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
 import { getFirestore, collection, doc, setDoc } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js'
 
 const firebaseConfig = {
@@ -33,6 +33,8 @@ async function signIn() {
 
       // Add user to the database
       const documentRef = doc(db, "users", user.uid);
+      alert("successfully logged in");
+
       setDoc(documentRef, {
         id: user.uid,
         name: user.displayName,
@@ -53,3 +55,38 @@ async function signIn() {
 }
 
 document.getElementById("google").addEventListener("click", signIn);
+
+async function logIn(){
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  signInWithEmailAndPassword(auth, email, password)
+  .then((result) => {
+    // The signed-in user info.
+    const user = result.user;
+    console.log(user);
+
+    // Add user to the database
+    const documentRef = doc(db, "users", user.uid);
+    alert("successfully logged in");
+
+    setDoc(documentRef, {
+      id: user.uid,
+      name: user.displayName,
+      email: user.email,
+      image: user.photoURL
+    }, {merge: true}).then(() => window.location.href = "student-dashboard.html");
+
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+}
+
+document.getElementById("login").addEventListener("click", logIn);
