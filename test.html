@@ -1,132 +1,138 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ALIAS - Automated Learning and Interactive Advising System</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link href='https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap' rel='stylesheet'>
-        <link rel="stylesheet" href="homepage.css">
-        <link rel="stylesheet" href="faqs.css">
-    </head>
-    <body>
-        <!-- Header -->
-        <header class="main-header">
-            <div class="dpsm-logo">
-                <div class="dpsm">
-                    <a href="homepage.html" class="logo">
-                        <img src="images/dpsmlogo.png" alt="DPSM Logo" class="logo-img">
-                        <div class="title">
-                            <span class="main-title"><b>ALIAS</b> <br> Automated Learning and Interactive Advising System</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="login-links">
-                    <a href="student-login.html" class="logins">STUDENT</a>
-                    <a href="adviser-login.html" class="logins">PROGRAM ADVISER</a>
-                    <a href="admin-login.html" class="logins">ADMIN</a>
-                    <a href="faqs.html" class="logins">FAQs</a>
-                </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALIAS - Automated Learning and Interactive Advising System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="dpsm-logo">
+            <div class="dpsm">
+                <a href="homepage.html" class="logo">
+                    <img src="images/dpsmlogo.png" alt="DPSM Logo" class="logo-img">
+
+                    <div class="title">
+                        <span class="main-title"><b>ALIAS</b></span>
+                    </div>
+                </a>
             </div>
-        </header>
-
-
-        <div class="container">
-            <div class="p-2 p-md-3 mb-1 text-center"> <!-- Added text-center class -->
-                <h2 class="faqs-title"><b>FREQUENTLY ASKED QUESTIONS</b></h2>
+            <div class="login-links">
+                <a href="student-login.html" class="logins">STUDENT</a>
+                <a href="adviser-login.html" class="logins">PROGRAM ADVISER</a>
+                <a href="admin-login.html" class="logins">ADMIN</a>
+                <a href="faqs.html" class="logins">FAQs</a>
             </div>
-
-            <div class="accordion" id="accordionExample">
-                <script>
-                  function createAccordionItem(title, subItems) {
-                        // Generate HTML for accordion item with title and sub-accordions
-                        const item = document.createElement('div');
-                        item.classList.add('accordion-item');
-
-                        // Create accordion title
-                        const titleElement = document.createElement('h2');
-                        titleElement.classList.add('accordion-header');
-                        titleElement.innerHTML = `
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#${title.toLowerCase().replace(/\s/g, '-')}" aria-expanded="true" aria-controls="${title.toLowerCase().replace(/\s/g, '-')}">
-                                ${title}
-                            </button>
-                        `;
-                        item.appendChild(titleElement);
-
-                        // Create accordion content
-                        const contentElement = document.createElement('div');
-                        contentElement.classList.add('accordion-collapse', 'collapse');
-                        contentElement.id = title.toLowerCase().replace(/\s/g, '-');
-                        const contentContainer = document.createElement('div');
-                        contentContainer.classList.add('accordion-body');
-                        
-                        // Loop through subItems to create sub-accordion items
-                        subItems.forEach(subItem => {
-                            const subAccordionItem = createSubAccordionItem(subItem.title, subItem.content);
-                            contentContainer.appendChild(subAccordionItem);
-                        });
-
-                        contentElement.appendChild(contentContainer);
-                        item.appendChild(contentElement);
-
-                        return item;
-                    }
-
-                    function createSubAccordionItem(title, content) {
-                        // Generate HTML for sub-accordion item with title and content
-                        const subItem = document.createElement('div');
-                        subItem.classList.add('accordion-item');
-
-                        const subAccordionHeader = document.createElement('h3');
-                        subAccordionHeader.classList.add('accordion-header');
-                        subAccordionHeader.innerHTML = `
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${title.toLowerCase().replace(/\s/g, '-')}-content" aria-expanded="false" aria-controls="${title.toLowerCase().replace(/\s/g, '-')}-content">
-                                ${title}
-                            </button>
-                        `;
-                        subItem.appendChild(subAccordionHeader);
-
-                        const subAccordionContent = document.createElement('div');
-                        subAccordionContent.classList.add('accordion-collapse', 'collapse');
-                        subAccordionContent.id = `${title.toLowerCase().replace(/\s/g, '-')}-content`;
-                        subAccordionContent.setAttribute('aria-labelledby', `${title.toLowerCase().replace(/\s/g, '-')}`);
-                        subAccordionContent.innerHTML = `
-                            <div class="accordion-body">
-                                ${content}
-                            </div>
-                        `;
-                        subItem.appendChild(subAccordionContent);
-
-                        return subItem;
-                    }
-
-                    const accordion = document.getElementById('accordionExample');
-                    // Call the function to generate Enrollment and Others sections
-                    accordion.append(createAccordionItem('Enrollment', enrollmentSubItems));
-                    accordion.append(createAccordionItem('Others', othersSubItems));
-                </script>
-                
-            </div>
-        </div> 
-
-            
-        <!-- Footer -->
-        <div class ="footer-contents">
-            <footer class="py-3 my-4">
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">HOME</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">ABOUT</a></li>
-                    <li class="nav-item"><a href="https://crs.upv.edu.ph/" class="nav-link px-2 text-body-secondary">UPV CRS</a></li>
-                    <li class="nav-item"><a href="https://www.facebook.com/UPVKomsai.Org/" class="nav-link px-2 text-body-secondary">UPV KOMSAI.ORG</a></li>
-                    <li class="nav-item"><a href="https://www.facebook.com/UPVStatSoc" class="nav-link px-2 text-body-secondary">STATISTICAL SOCIETY</a></li>
-                    <li class="nav-item"><a href="https://www.facebook.com/UPVMathCircle" class="nav-link px-2 text-body-secondary">MATH-O</a></li>
-                </ul>
-                <p class="text-center text-body-secondary">© Floyd Russel C. Hernandez, 2023</p>
-            </footer>
         </div>
+    </header>
 
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>ALIAS</header>
+        <ul>
+            <li>
+                <a href="#"><i class="fas fa-home"></i>HOME</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-check"></i>Check Standing</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-calendar"></i>Set Schedule</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-envelope"></i>Account</a>
+            </li>
+        </ul>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row m-0">
+                <div class="col">
+                    <div class="main-body">
+                        <div class="card mb-3 mt-3 p-3" style="display: flex;">
+                            <!-- Container for the three tables -->
+                            <div style="display: flex; flex: 1;">
+                                <!-- First Table: Image -->
+                                <table style="margin-right: 10px;">
+                                    <tr style="border-bottom: none;">
+                                        <td><img id="picture" src="images/blank-profile.png" alt="display picture"
+                                                class="rounded-circle" width="150"></td>
+                                    </tr>
+                                </table>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
-        <script src="./test.js" type="module"></script>
+                                <table style="flex: 1">
+                                    <tr>
+                                        <th>Full Name</th>
+                                        <td id="full-name">null</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Student Number</th>
+                                        <td id="student-num">null</td>
+                                    </tr>
+                                </table>
 
-    </body>
+                                <table style="flex: 1; ">
+                                    <tr>
+                                        <th>Degree Program</th>
+                                        <td id="deg-prog">null</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Year Level</th>
+                                        <td id="year-level">null</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container-btns m-4">
+                    <div class="row align-items-center">
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <a href="#" class="card-body p-4 mb-4">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <a href="#" class="card-body p-4 mb-4">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <a href="#" class="card-body p-4 mb-4">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="./test.js" type="module"></script>
+
+</body>
+
 </html>

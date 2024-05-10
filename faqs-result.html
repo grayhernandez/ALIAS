@@ -1,86 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-            FAQs Result
-        </title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="homepage.css" />
-        <link rel="stylesheet" href="faqs.css" />
 
-        <!-- search only version -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/algoliasearch@4.22.1/dist/algoliasearch-lite.umd.js"
-            integrity="sha256-pxkGFjfnFWYGOtV9uhCWK/spKiGS0Z7gVDKYm39LyfM="
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.65.0/dist/instantsearch.production.min.js"
-            integrity="sha256-5u4a3JbgF+Ok/p1R8e9iF4nWi4Qs8O1b89pc+8p1UB4="
-            crossorigin="anonymous"
-        ></script>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/reset-min.css"
-            integrity="sha256-2AeJLzExpZvqLUxMfcs+4DWcMwNfpnjUeAAvEtPr0wU="
-            crossorigin="anonymous"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.0.0/themes/satellite-min.css"
-            integrity="sha256-p/rGN4RGy6EDumyxF9t7LKxWGg6/MZfGhJM/asKkqvA="
-            crossorigin="anonymous"
-        />
-    </head>
-    <body>
-        <!-- Header -->
-        <header class="main-header">
-            <div class="dpsm-logo">
-                <div class="dpsm">
-                    <a href="homepage.html" class="logo">
-                        <img
-                            src="images/dpsmlogo.png"
-                            alt="DPSM Logo"
-                            class="logo-img"
-                        />
-                        <div class="title">
-                            <span class="main-title"
-                                ><b>ALIAS</b> <br />
-                                Automated Learning and Interactive Advising
-                                System</span
-                            >
-                        </div>
-                    </a>
-                </div>
-                <span class="login-links">
-                    <a href="student-login.html" class="logins">STUDENT</a>
-                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
-                    <a href="adviser-login.html" class="logins">PROGRAM ADVISER</a>
-                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
-                    <a href="admin-login.html" class="logins">ADMIN</a>
-                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
-                    <a href="faqs.html" class="logins">FAQs</a>
-                </span>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        FAQs Result
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="faqs.css" />
+
+    <!-- search only version -->
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.22.1/dist/algoliasearch-lite.umd.js"
+        integrity="sha256-pxkGFjfnFWYGOtV9uhCWK/spKiGS0Z7gVDKYm39LyfM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.65.0/dist/instantsearch.production.min.js"
+        integrity="sha256-5u4a3JbgF+Ok/p1R8e9iF4nWi4Qs8O1b89pc+8p1UB4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/reset-min.css"
+        integrity="sha256-2AeJLzExpZvqLUxMfcs+4DWcMwNfpnjUeAAvEtPr0wU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.0.0/themes/satellite-min.css"
+        integrity="sha256-p/rGN4RGy6EDumyxF9t7LKxWGg6/MZfGhJM/asKkqvA=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="dpsm-logo">
+            <div class="dpsm">
+                <a href="homepage.html" class="logo">
+                    <img src="images/dpsmlogo.png" alt="DPSM Logo" class="logo-img" />
+                    <div class="title">
+                        <span class="main-title"><b>ALIAS</b> <br />
+                            Automated Learning and Interactive Advising
+                            System</span>
+                    </div>
+                </a>
             </div>
-        </header>
+            <span class="login-links">
+                <a href="student-login.html" class="logins">STUDENT</a>
+                &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+                <a href="adviser-login.html" class="logins">PROGRAM ADVISER</a>
+                &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+                <a href="admin-login.html" class="logins">ADMIN</a>
+                &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+                <a href="faqs.html" class="logins">FAQs</a>
+            </span>
+        </div>
+    </header>
 
-        <div id="result-content">
-            <img src="images/loading.gif" alt="Loading..." class="loading-gif">
-          </div>
-          
-        <script type="module">
-            import algoliasearch from 'https://cdn.jsdelivr.net/npm/algoliasearch@4.22.1/dist/algoliasearch.esm.browser.js';
+    <div id="result-content">
+        <img src="images/loading.gif" alt="Loading..." class="loading-gif">
+    </div>
+
+    <script type="module">
+        import algoliasearch from 'https://cdn.jsdelivr.net/npm/algoliasearch@4.22.1/dist/algoliasearch.esm.browser.js';
 
             // Function to get URL parameters
             function getUrlParameter(name) {
@@ -137,59 +112,41 @@
                 .catch((err) => console.error(err));
         </script>
 
-        <!-- Footer -->
-        <div class="footer-contents">
-            <footer class="py-3 my-4">
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-body-secondary"
-                            >HOME</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-body-secondary"
-                            >ABOUT</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            href="https://crs.upv.edu.ph/"
-                            class="nav-link px-2 text-body-secondary"
-                            >UPV CRS</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            href="https://www.facebook.com/UPVKomsai.Org/"
-                            class="nav-link px-2 text-body-secondary"
-                            >UPV KOMSAI.ORG</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            href="https://www.facebook.com/UPVStatSoc"
-                            class="nav-link px-2 text-body-secondary"
-                            >STATISTICAL SOCIETY</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            href="https://www.facebook.com/UPVMathCircle"
-                            class="nav-link px-2 text-body-secondary"
-                            >MATH-O</a
-                        >
-                    </li>
-                </ul>
-                <p class="text-center text-body-secondary">
-                    © Floyd Russel C. Hernandez, 2023
-                </p>
-            </footer>
-        </div>
+    <!-- Footer -->
+    <div class="footer-contents">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://crs.upv.edu.ph/" class="nav-link px-2 text-body-secondary">UPV CRS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.facebook.com/UPVKomsai.Org/" class="nav-link px-2 text-body-secondary">UPV
+                        KOMSAI.ORG</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.facebook.com/UPVStatSoc" class="nav-link px-2 text-body-secondary">STATISTICAL
+                        SOCIETY</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.facebook.com/UPVMathCircle"
+                        class="nav-link px-2 text-body-secondary">MATH-O</a>
+                </li>
+            </ul>
+            <p class="text-center text-body-secondary">
+                © Floyd Russel C. Hernandez, 2023
+            </p>
+        </footer>
+    </div>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</body>
+
 </html>

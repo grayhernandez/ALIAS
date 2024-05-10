@@ -1,138 +1,139 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ALIAS - Automated Learning and Interactive Advising System</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link href='https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap' rel='stylesheet'>
-        <link rel="stylesheet" href="homepage.css">
-        <link rel="stylesheet" href="faqs.css">
 
-        <!-- search only version -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/algoliasearch@4.22.1/dist/algoliasearch-lite.umd.js"
-            integrity="sha256-pxkGFjfnFWYGOtV9uhCWK/spKiGS0Z7gVDKYm39LyfM="
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.65.0/dist/instantsearch.production.min.js"
-            integrity="sha256-5u4a3JbgF+Ok/p1R8e9iF4nWi4Qs8O1b89pc+8p1UB4="
-            crossorigin="anonymous"
-        ></script>
-        
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/satellite-min.css"
-            integrity="sha256-p/rGN4RGy6EDumyxF9t7LKxWGg6/MZfGhJM/asKkqvA="
-            crossorigin="anonymous"
-        />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALIAS - Automated Learning and Interactive Advising System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="faqs.css">
 
-    </head>
-    <body>
-        <!-- Header -->
-        <header class="main-header">
-            <div class="dpsm-logo">
-                <div class="dpsm">
-                    <a href="homepage.html" class="logo">
-                        <img src="images/dpsmlogo.png" alt="DPSM Logo" class="logo-img">
-                        <div class="title">
-                            <span class="main-title"><b>ALIAS</b> <br> Automated Learning and Interactive Advising System</span>
-                        </div>
-                    </a>
-                </div>
-                <span class="login-links">
-                    <a href="student-login.html" class="logins">STUDENT</a>
-                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
-                    <a href="adviser-login.html" class="logins">PROGRAM ADVISER</a>
-                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
-                    <a href="admin-login.html" class="logins">ADMIN</a>
-                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
-                    <a href="faqs.html" class="logins">FAQs</a>
-                </span>
+    <!-- search only version -->
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.22.1/dist/algoliasearch-lite.umd.js"
+        integrity="sha256-pxkGFjfnFWYGOtV9uhCWK/spKiGS0Z7gVDKYm39LyfM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.65.0/dist/instantsearch.production.min.js"
+        integrity="sha256-5u4a3JbgF+Ok/p1R8e9iF4nWi4Qs8O1b89pc+8p1UB4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.1.0/themes/satellite-min.css"
+        integrity="sha256-p/rGN4RGy6EDumyxF9t7LKxWGg6/MZfGhJM/asKkqvA=" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="dpsm-logo">
+            <div class="dpsm">
+                <a href="homepage.html" class="logo">
+                    <img src="images/dpsmlogo.png" alt="DPSM Logo" class="logo-img">
+                    <div class="title">
+                        <span class="main-title"><b>ALIAS</b> <br> Automated Learning and Interactive Advising
+                            System</span>
+                    </div>
+                </a>
             </div>
-        </header>
-
-        <div class="ais-InstantSearch">
-            <div class="right-panel">
-                <div class="p-2 p-md-3 mb-1 text-center">
-                    <h2 class="faqs-title"><b>FREQUENTLY ASKED QUESTIONS</b></h2>
-                </div>
-        
-                <div id="searchbox" class="row height m-2 d-flex justify-content-center align-items-center">
-                </div>
-        
-                <div id="hits"></div>
-                <div id="pagination"></div>
-            </div>
+            <span class="login-links">
+                <a href="student-login.html" class="logins">STUDENT</a>
+                &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+                <a href="adviser-login.html" class="logins">PROGRAM ADVISER</a>
+                &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+                <a href="admin-login.html" class="logins">ADMIN</a>
+                &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+                <a href="faqs.html" class="logins">FAQs</a>
+            </span>
         </div>
+    </header>
 
-        <script>
-            document.getElementById('search-button').addEventListener('click', () => {
-                const searchQuery = document.getElementById('search-input').value;
-                const searchWords = searchQuery.split(' '); // Split the search query into an array of words
-                searchWords.forEach(word => {
-                    search.searchAlgolia(word); // Pass each word to the searchAlgolia function individually
-                });
+    <div class="ais-InstantSearch">
+        <div class="right-panel">
+            <div class="p-2 p-md-3 mb-1 text-center">
+                <h2 class="faqs-title"><b>FREQUENTLY ASKED QUESTIONS</b></h2>
+            </div>
+
+            <div id="searchbox" class="row height m-5 d-flex justify-content-center align-items-center">
+            </div>
+
+            <div id="hits"></div>
+            <div id="pagination"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('search-button').addEventListener('click', () => {
+            const searchQuery = document.getElementById('search-input').value;
+            const searchWords = searchQuery.split(' '); // Split the search query into an array of words
+            searchWords.forEach(word => {
+                search.searchAlgolia(word); // Pass each word to the searchAlgolia function individually
             });
-        </script>
-        
-        <script>
-            const algoliaClient = algoliasearch('P9QAL65SXW', '1a990dfc473249dc3bccccb42460b41b');
-        
-            const searchClient = {
-                ...algoliaClient,
-                search(requests) {
-                    if (requests.every(({ params }) => !params.query)) {
-                        return Promise.resolve({
-                            results: requests.map(() => ({
-                                hits: [],
-                                nbHits: 0,
-                                nbPages: 0,
-                                page: 0,
-                                processingTimeMS: 0,
-                                hitsPerPage: 0,
-                                exhaustiveNbHits: false,
-                                query: '',
-                                params: '',
-                            })),
-                        });
-                    }
-        
-                    return algoliaClient.search(requests)
+        });
+    </script>
+
+    <script>
+        const algoliaClient = algoliasearch('P9QAL65SXW', '1a990dfc473249dc3bccccb42460b41b');
+        const searchClient = {
+            ...algoliaClient,
+            search(requests) {
+                if (requests.every(({
+                        params
+                    }) => !params.query)) {
+                    clearErrorMessage(); // Clear error message when there's no query
+                    return Promise.resolve({
+                        results: requests.map(() => ({
+                            hits: [],
+                            nbHits: 0,
+                            nbPages: 0,
+                            page: 0,
+                            processingTimeMS: 0,
+                            hitsPerPage: 0,
+                            exhaustiveNbHits: false,
+                            query: '',
+                            params: '',
+                        })),
+                    });
+                }
+                return algoliaClient.search(requests)
                     .then(response => {
                         // Check if there are no hits
-                        if (response.results && response.results.length > 0 && response.results[0].hits.length === 0) {
-                            // No similar words found, display error message
-                            // You can display an error message to the user here
-                            document.getElementById("hits").innerHTML = `<p style="text-align: center">No similar words found. Please try another search term or contact your program adviser.</p>`
+                        if (response.results && response.results.length > 0 && response.results[0].hits
+                            .length === 0) {
+                            displayErrorMessage(); // Display error message when no similar words found
+                        } else {
+                            clearErrorMessage(); // Clear error message when there are hits
                         }
                         return response; // Return the response for further processing
                     })
                     .catch(error => {
                         console.error("Error:", error); // Log the error for debugging
-                        // Display a user-friendly message to the user
-                        return { results: [] }; // Return an empty results object in case of error
+                        clearErrorMessage(); // Clear error message in case of error
+                        return {
+                            results: []
+                        }; // Return an empty results object in case of error
                     });
+            },
+        };
+        const search = instantsearch({
+            searchClient,
+            indexName: 'ALIAS',
+            insights: true,
+        });
+        search.addWidgets([
+            instantsearch.widgets.searchBox({
+                container: '#searchbox',
+                placeholder: "Have a question? Ask Now",
+                cssClasses: {
+                    reset: 'clear-button' // Assign a class to the clear button
                 },
-            };
-        
-            const search = instantsearch({
-                searchClient,
-                indexName: 'ALIAS',
-                insights: true,
-            });
-        
-            search.addWidgets([
-                instantsearch.widgets.searchBox({
-                    container: '#searchbox',
-                    placeholder: "Have a question? Ask Now",
-                }),
-        
-                instantsearch.widgets.hits({
-                    container: '#hits',
-                    templates: {
-                        item(hit, { html, components }) {
-                            return html`
+            }),
+            instantsearch.widgets.hits({
+                container: '#hits',
+                templates: {
+                    item(hit, {
+                        html,
+                        components
+                    }) {
+                        return html `
                                 <a href="faqs-result.html?hitId=${hit.objectID}" class="result-link" style="text-decoration: none; color: black"> <!-- Wrap each hit with a link -->
                                     <div class="results-container"> <!-- Container box for each hit -->
                                         <h2>
@@ -150,98 +151,131 @@
                                     </div>
                                 </a>
                             `;
-                        },
-
-                        empty(results, { html }) {
-                            return html``;
-                        },
                     },
-                }),
-            ]);
-        
-            const pagination = instantsearch.widgets.panel({
-                hidden: ({results }) => results.nbPages < 2,
-            })(instantsearch.widgets.pagination);
-        
-            search.addWidget(
-                pagination({
-                    container: '#pagination',
-                }),
-            );
-        
-            search.start();
-        </script>
-        
-        <section class="faq-articles">
-            <div class="container p-4">
-                <div class="row" >
-                    <div class="col">
-                        <h2>Popular Articles</h2>
-                        <div class="col-xs-2-12">
-                            <ol class="popular-articles-list">
-                            
-                                <li class="article">
-                                    <a href="/faqs-result.html?hitId=27d4af765a962_dashboard_generated_id" id="27d4af765a962" class="article-title" style="--check-position: 0;">What is ALIAS?</a>
-                                </li>
-    
-                                <li class="article">
-                                    <a href="/faqs-result.html?hitId=2d5626ac97a4b_dashboard_generated_id" id="2d5626ac97a4b" class="article-title" style="--check-position: 0;">How to enroll?</a>
-                                </li>
-                            
-                                <li class="article">
-                                    <a href="/faqs-result.html?hitId=1ed0586e08a2a1_dashboard_generated_id" id="1ed0586e08a2a1" class="article-title" style="--check-position: 0;">What are the requirements for Latin Honors?</a>
-                                </li>
-                            
-                                <li class="article">
-                                    <a href="/faqs-result.html?hitId=1a2dca2b6e9a17_dashboard_generated_id" id="1a2dca2b6e9a17" class="article-title" style="--check-position: 0;">What are the requirements for graduation?</a>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h2>New Articles</h2>
-                        <ol class="popular-articles-list recent_updates-list">
-                            
-                                <li class="article">
-                                    <a href="/faqs-result.html?hitId=12a9b3972da287_dashboard_generated_id" id="12a9b3972da287" class="article-title" style="--check-position: -37px;">What are the delivery modes for Academic Year 2023-2024?</a>
-                                </li>
-                            
-                                <li class="article">
-                                    <a href="/faqs-result.html?hitId=10815e981a3c88_dashboard_generated_id" id="10815e981a3c88" class="article-title" style="--check-position: -37px;">How to change matriculation? </a>
-                                </li>
-                            
-                                <li class="article">
-                                    <a href="/faqs-result.html?hitId=27d4af765a962_dashboard_generated_id" id="27d4af765a962" class="article-title" style="--check-position: 0;">What is ALIAS?</a>
-                                </li>
-    
-                                <li class="article">
-                                    <a href="/faqs-result.html?hitId=2d5626ac97a4b_dashboard_generated_id" id="2d5626ac97a4b" class="article-title" style="--check-position: 0;">How to enroll?</a>
-                                </li>
-                            
+                    empty(results, {
+                        html
+                    }) {
+                        return html ``;
+                    },
+                },
+            }),
+        ]);
+        const pagination = instantsearch.widgets.panel({
+            hidden: ({
+                results
+            }) => results.nbPages < 2,
+        })(instantsearch.widgets.pagination);
+        search.addWidget(
+            pagination({
+                container: '#pagination',
+            }),
+        );
+        search.start();
+        // Function to display error message
+        function displayErrorMessage() {
+            document.getElementById("hits").innerHTML =
+                `<p style="text-align: center">No similar words found. Please try another search term or contact your program adviser.</p>`;
+        }
+        // Function to clear error message
+        function clearErrorMessage() {
+            document.getElementById("hits").innerHTML = "";
+        }
+        // Add event listener to clear button
+        document.querySelector('.clear-button').addEventListener('click', clearErrorMessage);
+        // Add event listener to search input field to clear error message
+        document.querySelector('#searchbox input[type="search"]').addEventListener('input', clearErrorMessage);
+    </script>
+
+    <hr>
+
+    <section class="faq-articles">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col">
+                    <h2>Popular Articles</h2>
+                    <div class="col-xs-2-12">
+                        <ol class="popular-articles-list">
+
+                            <li class="article">
+                                <a href="/faqs-result.html?hitId=27d4af765a962_dashboard_generated_id"
+                                    id="27d4af765a962" class="article-title" style="--check-position: 0;">What is
+                                    ALIAS?</a>
+                            </li>
+
+                            <li class="article">
+                                <a href="/faqs-result.html?hitId=2d5626ac97a4b_dashboard_generated_id"
+                                    id="2d5626ac97a4b" class="article-title" style="--check-position: 0;">How to
+                                    enroll?</a>
+                            </li>
+
+                            <li class="article">
+                                <a href="/faqs-result.html?hitId=1ed0586e08a2a1_dashboard_generated_id"
+                                    id="1ed0586e08a2a1" class="article-title" style="--check-position: 0;">What are the
+                                    requirements for Latin Honors?</a>
+                            </li>
+
+                            <li class="article">
+                                <a href="/faqs-result.html?hitId=1a2dca2b6e9a17_dashboard_generated_id"
+                                    id="1a2dca2b6e9a17" class="article-title" style="--check-position: 0;">What are the
+                                    requirements for graduation?</a>
+                            </li>
                         </ol>
                     </div>
                 </div>
+                <div class="col">
+                    <h2>New Articles</h2>
+                    <ol class="popular-articles-list recent_updates-list">
+
+                        <li class="article">
+                            <a href="/faqs-result.html?hitId=12a9b3972da287_dashboard_generated_id" id="12a9b3972da287"
+                                class="article-title" style="--check-position: -37px;">What are the delivery modes for
+                                Academic Year 2023-2024?</a>
+                        </li>
+
+                        <li class="article">
+                            <a href="/faqs-result.html?hitId=10815e981a3c88_dashboard_generated_id" id="10815e981a3c88"
+                                class="article-title" style="--check-position: -37px;">How to change matriculation? </a>
+                        </li>
+
+                        <li class="article">
+                            <a href="/faqs-result.html?hitId=27d4af765a962_dashboard_generated_id" id="27d4af765a962"
+                                class="article-title" style="--check-position: 0;">What is ALIAS?</a>
+                        </li>
+
+                        <li class="article">
+                            <a href="/faqs-result.html?hitId=2d5626ac97a4b_dashboard_generated_id" id="2d5626ac97a4b"
+                                class="article-title" style="--check-position: 0;">How to enroll?</a>
+                        </li>
+
+                    </ol>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-        <!-- Footer -->
-        <div class ="footer-contents mt-0">
-            <footer class="py-1 my-2">
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+    <!-- Footer -->
+    <div class="footer-contents sticky-bottom mt-0">
+        <footer class="py-1 my-2">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">HOME</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">ABOUT</a></li>
-                <li class="nav-item"><a href="https://crs.upv.edu.ph/" class="nav-link px-2 text-body-secondary">UPV CRS</a></li>
-                <li class="nav-item"><a href="https://www.facebook.com/UPVKomsai.Org/" class="nav-link px-2 text-body-secondary">UPV KOMSAI.ORG</a></li>
-                <li class="nav-item"><a href="https://www.facebook.com/UPVStatSoc" class="nav-link px-2 text-body-secondary">STATISTICAL SOCIETY</a></li>
-                <li class="nav-item"><a href="https://www.facebook.com/UPVMathCircle" class="nav-link px-2 text-body-secondary">MATH-O</a></li>
-                </ul>
-                <p class="text-center text-body-secondary pt-3 mt-3">© Floyd Russel C. Hernandez, 2023</p>
-            </footer>
-        </div>
+                <li class="nav-item"><a href="https://crs.upv.edu.ph/" class="nav-link px-2 text-body-secondary">UPV
+                        CRS</a></li>
+                <li class="nav-item"><a href="https://www.facebook.com/UPVKomsai.Org/"
+                        class="nav-link px-2 text-body-secondary">UPV KOMSAI.ORG</a></li>
+                <li class="nav-item"><a href="https://www.facebook.com/UPVStatSoc"
+                        class="nav-link px-2 text-body-secondary">STATISTICAL SOCIETY</a></li>
+                <li class="nav-item"><a href="https://www.facebook.com/UPVMathCircle"
+                        class="nav-link px-2 text-body-secondary">MATH-O</a></li>
+            </ul>
+            <p class="text-center text-body-secondary pt-3 mt-3">© Floyd Russel C. Hernandez, 2023</p>
+        </footer>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+</body>
 
-    </body>
 </html>

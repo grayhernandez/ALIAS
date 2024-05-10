@@ -49,7 +49,9 @@ function getUserData(userID) {
             document.getElementById("student-num").innerHTML = data.studentNum;
             document.getElementById("year-level").innerHTML = data.yearLvl;
             document.getElementById("gwa").innerHTML = data.gwa;
-            document.getElementById("total-units").innerHTML = data.totalUnits;
+            document.getElementById("current-units").innerHTML = data.totalUnits;
+            // document.getElementById("expected-year").innerHTML = data.expectedYear;
+            // document.getElementById("current-standing").innerHTML = data.currentStanding;
           } else {
             // docSnap.data() will be undefined in this case
             console.log("No such document!");

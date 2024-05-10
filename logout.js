@@ -21,6 +21,6 @@ document.getElementById("logout").addEventListener("click", () => {
 
 onAuthStateChanged(auth, (user) => {
     if (!user) {
-        window.location.href = "student-login.html";
+        window.location.href = "homepage.html";
     }
 })
