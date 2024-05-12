@@ -1,0 +1,10 @@
+.dropdown-menu {
+    overflow-y: auto;
+    max-height: 100px; /* Adjust the height as needed */ /* Optionally limit the height of the dropdown menu */
+    width: 70px; /* Set the width of the dropdown menu items */
+    text-align: center; /* Center-align the text */
+  }
+.courseTable {
+    width: 100%;
+    text-align: center;
+}
