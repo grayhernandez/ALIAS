@@ -33,23 +33,19 @@ onAuthStateChanged(auth, (user) => {
   });
 
 
-function getUserData(userID) {
-    const userRef = doc(db, "users", userID);
+function getUserData(facultyID) {
+    const userRef = doc(db, "faculty", facultyID);
 
     getDoc(userRef).then((result) => {
         if (result.exists()) {
             const data = result.data();
             console.log(data);
 
-            if (data.image){
-              document.getElementById("picture").src = data.image;
-            }
-            document.getElementById("full-name").innerHTML = data.name;
-            document.getElementById("deg-prog").innerHTML = data.degProg;
-            document.getElementById("student-num").innerHTML = data.studentNum;
-            document.getElementById("year-level").innerHTML = data.yearLvl;
-            document.getElementById("gwa").innerHTML = data.gwa;
-            document.getElementById("current-units").innerHTML = data.totalUnits;
+            
+            document.getElementById("full-name").innerHTML = data.facultyName;
+            document.getElementById("employee-num").innerHTML = data.employeeID;
+            document.getElementById("faculty-unit").innerHTML = data.facultyUnit;
+            document.getElementById("designation").innerHTML = data.departmentName;
             
             // document.getElementById("expected-year").innerHTML = data.expectedYear;
             // document.getElementById("current-standing").innerHTML = data.currentStanding;
@@ -60,4 +56,3 @@ function getUserData(userID) {
     }).catch((err) => console.error(err));
 }
 
-const appointmentsCollectionRef = collection(db, "users", userID, "appointments");	

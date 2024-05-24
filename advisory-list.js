@@ -25,21 +25,23 @@ const db = getFirestore(app);
 // Check user authentication state
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        displayStudentInfo();
+        displayAllStudents();
     } else {
         window.location.href = "advisory-list.html";
     }
 });
 
-async function displayStudentInfo() {
+// Function to get and display all students
+async function displayAllStudents() {
     try {
-        const studentInfoRef = collection(db, "students");
-        const querySnapshot = await getDocs(studentInfoRef);
+        const studentsCollectionRef = collection(db, "students");
+        const querySnapshot = await getDocs(studentsCollectionRef);
 
-        const container = document.getElementById("student-info-table");
-        container.innerHTML = ''; // Clear existing content
+        // Assuming you have a container to hold the list of students
+        const container = document.getElementById("students-container");
+        container.innerHTML = '';
 
-        querySnapshot.forEach(async (studentDoc) => {
+        querySnapshot.forEach(async(studentDoc) => {
             const data = studentDoc.data();
             console.log(data);
 
@@ -50,15 +52,16 @@ async function displayStudentInfo() {
             const degreeProgramData = degreeProgramSnapshot.data();
             console.log(degreeProgramData);
 
+            // Create a new row for each student's details
             const studentRow = document.createElement("tr");
-
-            const studentNameCell = document.createElement("td");
-            studentNameCell.innerHTML = data.studentName;
-            studentRow.appendChild(studentNameCell);
 
             const studentNumberCell = document.createElement("td");
             studentNumberCell.innerHTML = data.studentNumber;
             studentRow.appendChild(studentNumberCell);
+
+            const studentNameCell = document.createElement("td");
+            studentNameCell.innerHTML = data.studentName;
+            studentRow.appendChild(studentNameCell);
 
             const studentDegProgCell = document.createElement("td");
             studentDegProgCell.innerHTML = degreeProgramData.degreeName;
@@ -68,10 +71,17 @@ async function displayStudentInfo() {
             studentYearCell.innerHTML = data.yearLevel;
             studentRow.appendChild(studentYearCell);
 
+            const studentActionCell = document.createElement("td");
+            const actionLink = document.createElement("a");
+            actionLink.href = "input-grades.html"; // Adjust the link as necessary
+            actionLink.innerHTML = "Check Class Standing";
+            studentActionCell.appendChild(actionLink);
+            studentRow.appendChild(studentActionCell);
+
             // Append the studentRow to the container
             container.appendChild(studentRow);
         });
-    } catch (err) {
-        console.error(err);
+    } catch (error) {
+        console.error("Error getting documents: ", error);
     }
 }
