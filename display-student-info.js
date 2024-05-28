@@ -1,6 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
 import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
-import { getFirestore, collection, getDocs, getDoc, doc } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+import { getFirestore, getDoc, doc } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBsU_QwNM86gVXWmcdURPCIcCL2lpYWyYA",
@@ -22,46 +22,44 @@ const auth = getAuth();
 // DB services
 const db = getFirestore(app);
 
-// Check user authentication state
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-        displayAllStudents();
-    } else {
-        window.location.href = "advisory-list.html";
-    }
-});
+// Get student ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const studentID = urlParams.get('studentID');
 
-// Function to get and display all students
-async function displayAllStudents() {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            displayStudentsInfo(studentID);
+        } else {
+            window.location.href = "advisory-list.html";
+        }
+    });
+
+async function displayStudentsInfo(studentID) {
     try {
-        const studentsCollectionRef = collection(db, "students");
-        const querySnapshot = await getDocs(studentsCollectionRef);
+        const studentDocRef = doc(db, "students", studentID);
+        const studentDoc = await getDoc(studentDocRef);
 
-        // Assuming you have a container to hold the list of students
-        const container = document.getElementById("students-container");
-        container.innerHTML = '';
-
-        querySnapshot.forEach(async(studentDoc) => {
+        if (studentDoc.exists()) {
             const data = studentDoc.data();
             console.log(data);
 
             const degreeProgramID = data.degreeProgramID;
             const degreeProgramRef = doc(db, "degrees", degreeProgramID);
-
             const degreeProgramSnapshot = await getDoc(degreeProgramRef);
             const degreeProgramData = degreeProgramSnapshot.data();
             console.log(degreeProgramData);
 
-            // Create a new row for each student's details
+            const container = document.getElementById("student-info-table");
+            
             const studentRow = document.createElement("tr");
-
-            const studentNumberCell = document.createElement("td");
-            studentNumberCell.innerHTML = data.studentNumber;
-            studentRow.appendChild(studentNumberCell);
 
             const studentNameCell = document.createElement("td");
             studentNameCell.innerHTML = data.studentName;
             studentRow.appendChild(studentNameCell);
+
+            const studentNumberCell = document.createElement("td");
+            studentNumberCell.innerHTML = data.studentNumber;
+            studentRow.appendChild(studentNumberCell);
 
             const studentDegProgCell = document.createElement("td");
             studentDegProgCell.innerHTML = degreeProgramData.degreeName;
@@ -71,23 +69,12 @@ async function displayAllStudents() {
             studentYearCell.innerHTML = data.yearLevel;
             studentRow.appendChild(studentYearCell);
 
-            const studentActionCell = document.createElement("td");
-            const actionButton = document.createElement("button");
-            actionButton.innerHTML = "Check Class Standing";
-
-            actionButton.setAttribute("data-student-id", studentDoc.id); // Store student ID in data attribute
-            actionButton.addEventListener('click', (event) => {
-                const studentID = event.target.getAttribute('data-student-id');
-                window.location.href = `input-grades.html?studentID=${studentID}`;
-            });
-            studentActionCell.appendChild(actionButton);
-            studentRow.appendChild(studentActionCell);
-
-
-            // Append the studentRow to the container
             container.appendChild(studentRow);
-        });
-    } catch (error) {
-        console.error("Error getting documents: ", error);
+
+        } else {
+            console.error('No such student found');
+        }
+    } catch (err) {
+        console.error(err);
     }
 }

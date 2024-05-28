@@ -38,6 +38,7 @@
     </header>
 
     <!-- INSERT STUDENT INFORMATION -->
+
     <div class="container">
         <div class="row m-0">
             <div class="col">
@@ -53,9 +54,9 @@
                                     <th>Year Level</th>
                                 </tr>
                                 <tbody id="student-info-table">
-                                    
-                                </tbody>
 
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -69,9 +70,9 @@
         <div class="row m-0">
             <div class="col">
                 <div class="card h-auto">
-                    <div class="card-body">
-                        <h6 class="d-flex align-items-center mb-3" style="font-style: italic;">First Semester</h6>
-                        <table class="courseTable" style="width: 100% auto; text-align: center;">
+                    <div id="semester-name" class="card-body">
+                        <h6 id ="semester" class="d-flex align-items-center mb-3" style="font-style: italic;"></h6>
+                        <table class="course-table" style="width: 100% auto; text-align: center;">
                             <tr>
                                 <!-- <th>Subject Type</th> -->
                                 <th>Course Code</th>
@@ -90,30 +91,28 @@
                                 <th>
                                     Total Number of Units:
                                 </th>
-                                <td>
-                                    18
+                                <td id="total-units">
+                                    
                                 </td>
                             </tr>
                             <tr>
                                 <th>
                                     Class Standing:
                                 </th>
-                                <td>
-                                    Good Standing
+                                <td id ="class-standing">
                                 </td>
                             </tr>
                             <tr>
                                 <th>
                                     GWA:
                                 </th>
-                                <td>
-                                    2.134
+                                <td id="gwa">
                                 </td>
                             </tr>
 
                         </table>
                         <tr>
-                            Note: You are currently in the 1st year.
+                            Note: 
                         </tr>
                     </div>
 
@@ -125,8 +124,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
+    <script src="./input-grades.js" type="module"></script>
     <script src="logout.js" type="module"></script>
-    <script src="input-grades.js" type="module"></script>
+    <script src="display-student-info.js" type="module"></script>
 
 </body>
 
