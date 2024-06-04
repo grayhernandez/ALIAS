@@ -1,6 +1,7 @@
 // Import necessary Firebase modules
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
-import { getFirestore, getDocs, getDoc, doc, collection } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+import { getFirestore, getDocs, getDoc, doc, collection, query, orderBy } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+import { onAuthStateChanged, getAuth } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -18,26 +19,32 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+const auth = getAuth();
+
+// Load and display course grades on auth load
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        displayCourseGrades(user.uid);
+    }
+});
+
 // Helper function to get URL parameters
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
 }
 
-// Retrieve dynamic IDs from URL
-const studentID = getQueryParam('studentID');
 const academicYearID = getQueryParam('academicYearID');
 const subjectGradeID = getQueryParam('subjectGradeID');
 const courseCollection = 'subjectRecords'; // Adjust this based on your Firestore structure
 
-console.log('Student ID:', studentID);
 console.log('Academic Year ID:', academicYearID);
 console.log('Subject Grade ID:', subjectGradeID);
 console.log('subjectRecords:', courseCollection);
 
-// Fetch semestral information
-async function semestralInfo() {
-    const semestralGradesCollectionRef = collection(db, `studentGrades/${studentID}/semestralGrades`);
+// Fetch semestral information in correct order
+async function semestralInfo(studentID) {
+    const semestralGradesCollectionRef = query(collection(db, `studentGrades/${studentID}/semestralGrades`), orderBy("acadYearName", "asc"));
     const semestralSnapshot = await getDocs(semestralGradesCollectionRef);
     const semestralData = semestralSnapshot.docs.map(doc => doc.data());
     return semestralData;
@@ -59,8 +66,12 @@ async function getPrerequisiteCodes(prerequisiteIDs) {
 }
 
 // Fetch course grades
-async function getCourseGrades(semestralData) {
+async function getCourseGrades(studentID) {
     let allGrades = [];
+
+    const semestralGradesCollectionRef = query(collection(db, `studentGrades/${studentID}/semestralGrades`), orderBy("acadYearName", "asc"));
+    const semestralSnapshot = await getDocs(semestralGradesCollectionRef);
+    const semestralData = semestralSnapshot.docs.map(doc => doc.data());
 
     for (const semestral of semestralData) {
         const gradesCollectionRef = collection(db, `studentGrades/${studentID}/semestralGrades/${semestral.academicYearID}/${courseCollection}`);
@@ -154,12 +165,6 @@ function createSemesterContainer(index, semesterName) {
         classStandingTable.appendChild(tr);
     });
 
-    // const noteRow = document.createElement('tr');
-    // const noteCell = document.createElement('td');
-    // // noteCell.innerText = 'Note: You are allowed to take all the subjects next semester.';
-    // noteRow.appendChild(noteCell);
-    // classStandingTable.appendChild(noteRow);
-
     cardBody.appendChild(semesterHeader);
     cardBody.appendChild(courseTable);
     cardBody.appendChild(classStandingTable);
@@ -170,8 +175,22 @@ function createSemesterContainer(index, semesterName) {
     document.body.appendChild(container);
 }
 
-// Function to display course grades for a specific semester
-function displaySemesterData(semesterData, index) {
+function moveSubjectToNextSemester(grade, semestralData) {
+    const currentSemesterID = grade.semesterID;
+    const currentSemesterIndex = semestralData.findIndex(semester => semester.academicYearID === currentSemesterID);
+
+    // Find the next semester
+    const nextSemesterIndex = currentSemesterIndex + 1;
+    if (nextSemesterIndex < semestralData.length) {
+        if (!semestralData[nextSemesterIndex].grades) {
+            semestralData[nextSemesterIndex].grades = [];
+        }
+        semestralData[nextSemesterIndex].grades.push(grade);
+        grade.movedToNextSemester = true;  // Add a flag to the grade to mark it as moved
+    }
+}
+
+function displaySemesterData(semesterData, index, semestralData) {
     const totalUnitsCell = document.getElementById(`total-units-${index}`);
     const classStandingCell = document.getElementById(`class-standing-${index}`);
     const gwaCell = document.getElementById(`gwa-${index}`);
@@ -188,15 +207,17 @@ function displaySemesterData(semesterData, index) {
     container.innerHTML = ''; // Clear existing content
 
     semesterData.forEach(grade => {
+        if (grade.movedToNextSemester) return;  // Skip grades that were moved to the next semester
+
         const row = document.createElement('tr');
 
-        const courseCodeCell = document.createElement('td');
-        courseCodeCell.innerHTML = grade.subjectCode || '';
-        row.appendChild(courseCodeCell);
+        const codeCell = document.createElement('td');
+        codeCell.innerHTML = grade.subjectCode || '';
+        row.appendChild(codeCell);
 
-        const courseTitleCell = document.createElement('td');
-        courseTitleCell.innerHTML = grade.subjectName || '';
-        row.appendChild(courseTitleCell);
+        const titleCell = document.createElement('td');
+        titleCell.innerHTML = grade.subjectName || '';
+        row.appendChild(titleCell);
 
         const unitsCell = document.createElement('td');
         unitsCell.innerHTML = grade.subjectUnit || '';
@@ -214,7 +235,9 @@ function displaySemesterData(semesterData, index) {
         prerequisitesCell.innerHTML = grade.subjectPrereq || '';
         row.appendChild(prerequisitesCell);
 
-        // Check if finalGrade or completionGrade is 5 and add a note if necessary
+        container.appendChild(row);
+
+        // Check if finalGrade or completionGrade is 5 or 'DRP' and add a note if necessary
         if (grade.subjectFinalGrade == 5 || grade.subjectCompletionGrade == 5 || grade.subjectFinalGrade == 'DRP' || grade.subjectCompletionGrade == 'DRP') {
             const noteRow = document.createElement('tr');
             const noteCell = document.createElement('td');
@@ -224,8 +247,21 @@ function displaySemesterData(semesterData, index) {
             noteCell.style.fontWeight = 'bold';
             noteRow.appendChild(noteCell);
             container.appendChild(noteRow);
-        }
-        if (grade.subjectFinalGrade == 'INC' || grade.subjectCompletionGrade == null) {
+
+            // Move subject to the next semester
+            moveSubjectToNextSemester(grade, semestralData);
+
+        } else if (grade.subjectFinalGrade == 'INC' && grade.subjectCompletionGrade != null) {
+            const noteRow = document.createElement('tr');
+            const noteCell = document.createElement('td');
+            noteCell.colSpan = 6; // Span across all table columns
+            noteCell.innerHTML = `Note: You have complied your remaining credits for ${grade.subjectCode}.`;
+            noteCell.style.color = 'red';
+            noteCell.style.fontWeight = 'bold';
+            noteRow.appendChild(noteCell);
+            container.appendChild(noteRow);
+
+        } else if (grade.subjectFinalGrade == 'INC') {
             const noteRow = document.createElement('tr');
             const noteCell = document.createElement('td');
             noteCell.colSpan = 6; // Span across all table columns
@@ -235,17 +271,13 @@ function displaySemesterData(semesterData, index) {
             noteRow.appendChild(noteCell);
             container.appendChild(noteRow);
         }
-
-        container.appendChild(row);
     });
 }
 
-
-// Combine both functions and display data for multiple semesters
-async function displayCourseGrades() {
+async function displayCourseGrades(studentID) {
     try {
-        const semestralData = await semestralInfo();
-        const gradesData = await getCourseGrades(semestralData);
+        const semestralData = await semestralInfo(studentID);
+        const gradesData = await getCourseGrades(studentID);
 
         // Group grades by semester
         const groupedData = gradesData.reduce((acc, grade) => {
@@ -256,12 +288,22 @@ async function displayCourseGrades() {
             return acc;
         }, {});
 
-        // Display each semester using Object.entries to iterate over groupedData
+        // Display each semester
         let index = 0;
-        for (const [semesterID, semesterGrades] of Object.entries(groupedData)) {
+        for (const semesterID in groupedData) {
+            const semesterGrades = groupedData[semesterID];
             if (semesterGrades.length > 0) {
                 createSemesterContainer(index, semesterGrades[0].semesterName);
-                displaySemesterData(semesterGrades, index);
+                displaySemesterData(semesterGrades, index, semestralData);
+                index++;
+            }
+        }
+
+        // Display the grades moved to the next semesters
+        for (let i = 0; i < semestralData.length; i++) {
+            if (semestralData[i].grades) {
+                createSemesterContainer(index, semestralData[i].acadYearName);
+                displaySemesterData(semestralData[i].grades, index, semestralData);
                 index++;
             }
         }
@@ -269,6 +311,3 @@ async function displayCourseGrades() {
         console.error('Error displaying course grades:', error);
     }
 }
-
-// Load and display course grades on page load
-document.addEventListener('DOMContentLoaded', displayCourseGrades);

@@ -28,7 +28,7 @@ onAuthStateChanged(auth, (user) => {
       const uid = user.uid;
       getUserData(uid);
     } else {
-      window.location.href = "login.html";
+      window.location.href = "student-dashboard.html";
     }
   });
 
@@ -60,4 +60,3 @@ function getUserData(userID) {
     }).catch((err) => console.error(err));
 }
 
-const appointmentsCollectionRef = collection(db, "users", userID, "appointments");	
