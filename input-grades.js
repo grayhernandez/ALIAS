@@ -1,6 +1,6 @@
 // Import necessary Firebase modules
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
-import { getFirestore, getDocs, getDoc, doc, collection } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+import { getFirestore, getDocs, getDoc, doc, collection, query, orderBy } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -39,7 +39,7 @@ console.log('subjectRecords:', courseCollection);
 async function semestralInfo() {
     const semestralGradesCollectionRef = collection(db, `studentGrades/${studentID}/semestralGrades`);
     const semestralSnapshot = await getDocs(semestralGradesCollectionRef);
-    const semestralData = semestralSnapshot.docs.map(doc => doc.data());
+    const semestralData = semestralSnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
     return semestralData;
 }
 
@@ -58,12 +58,62 @@ async function getPrerequisiteCodes(prerequisiteIDs) {
     return prerequisiteCodes;
 }
 
+// Fetch next semester ID
+async function getNextSemesterID(prevSemID) {
+    try {
+        let nextSemester;
+        const semesterRef = query(collection(db, `semesters`), orderBy("sequenceNum", "asc"));
+        const semesterSnapshot = await getDocs(semesterRef);
+        const semesterData = semesterSnapshot.docs.map(doc => doc.data());
+
+        let currentYear = 0;
+        let currentSemNum = 0;
+
+        for (let semester of semesterData) {
+            if (semester.academicYearID == prevSemID) {
+                currentYear = semester.yearLevel + 1;
+                currentSemNum = semester.semNumber;
+
+                for (let semester2 of semesterData) {
+                    if (semester2.yearLevel == currentYear && semester2.semNumber == currentSemNum) {
+                        nextSemester = semester2;
+                        return nextSemester;
+                    }
+                }
+            }
+        }
+        return nextSemester;
+
+    } catch (error) {
+        console.log("Error: ", error);
+    }
+};
+
+async function getSemester(semesterID) {
+    try {
+        const semesterRef = query(collection(db, `semesters`), orderBy("sequenceNum", "asc"));
+        const semesterSnapshot = await getDocs(semesterRef);
+        const semesterData = semesterSnapshot.docs.map(doc => doc.data());
+
+        for (let semester of semesterData) {
+            if (semester.academicYearID == semesterID) {
+                return semester;
+            }
+        }
+
+        return null;
+
+    } catch (error) {
+        console.log("Error: ", error);
+    }
+};
+
 // Fetch course grades
 async function getCourseGrades(semestralData) {
     let allGrades = [];
 
     for (const semestral of semestralData) {
-        const gradesCollectionRef = collection(db, `studentGrades/${studentID}/semestralGrades/${semestral.academicYearID}/${courseCollection}`);
+        const gradesCollectionRef = collection(db, `studentGrades/${studentID}/semestralGrades/${semestral.id}/${courseCollection}`);
         const gradesSnapshot = await getDocs(gradesCollectionRef);
 
         for (const docSnap of gradesSnapshot.docs) {
@@ -74,7 +124,8 @@ async function getCourseGrades(semestralData) {
             const prerequisiteCodes = await getPrerequisiteCodes(subjectData.prerequisiteIDs);
 
             allGrades.push({
-                semesterID: semestral.academicYearID,
+                semesterID: semestral.id,
+                semesterSequence: semestral.sequenceNum,
                 semesterName: semestral.acadYearName,
                 semestralStanding: semestral.classStanding,
                 semestralGwa: semestral.gwa,
@@ -94,7 +145,7 @@ async function getCourseGrades(semestralData) {
 // Function to create and display semester data
 function createSemesterContainer(index, semesterName) {
     const container = document.createElement('div');
-    container.className = 'container-fluid';
+    container.className = 'container-fluid semester-container';
     container.style = 'width: 100% auto; font-size: 15px;';
 
     const row = document.createElement('div');
@@ -154,12 +205,6 @@ function createSemesterContainer(index, semesterName) {
         classStandingTable.appendChild(tr);
     });
 
-    // const noteRow = document.createElement('tr');
-    // const noteCell = document.createElement('td');
-    // // noteCell.innerText = 'Note: You are allowed to take all the subjects next semester.';
-    // noteRow.appendChild(noteCell);
-    // classStandingTable.appendChild(noteRow);
-
     cardBody.appendChild(semesterHeader);
     cardBody.appendChild(courseTable);
     cardBody.appendChild(classStandingTable);
@@ -188,6 +233,38 @@ function displaySemesterData(semesterData, index) {
     container.innerHTML = ''; // Clear existing content
 
     semesterData.forEach(grade => {
+        if (grade.subjectFinalGrade == 5 || grade.subjectCompletionGrade == 5 || grade.subjectFinalGrade == 'DRP' || grade.subjectCompletionGrade == 'DRP') {
+            if (!grade.toRetake) {
+                const noteRow = document.createElement('tr');
+                const noteCell = document.createElement('td');
+                noteCell.colSpan = 6; // Span across all table columns
+                noteCell.innerHTML = `Note: You need to retake ${grade.subjectCode}.`;
+                noteCell.style.color = 'red';
+                noteCell.style.fontWeight = 'bold';
+                noteRow.appendChild(noteCell);
+                container.appendChild(noteRow);
+            }
+        } else if (grade.subjectFinalGrade == 'INC' && grade.subjectCompletionGrade != null) {
+            const noteRow = document.createElement('tr');
+            const noteCell = document.createElement('td');
+            noteCell.colSpan = 6; // Span across all table columns
+            noteCell.innerHTML = `Note: You have complied your remaining credits for ${grade.subjectCode}.`;
+            noteCell.style.color = 'green';
+            noteCell.style.fontWeight = 'bold';
+            noteRow.appendChild(noteCell);
+            container.appendChild(noteRow);
+
+        } else if (grade.subjectFinalGrade == 'INC') {
+            const noteRow = document.createElement('tr');
+            const noteCell = document.createElement('td');
+            noteCell.colSpan = 6; // Span across all table columns
+            noteCell.innerHTML = `Note: You have one year to comply your remaining credits for ${grade.subjectCode}.`;
+            noteCell.style.color = 'red';
+            noteCell.style.fontWeight = 'bold';
+            noteRow.appendChild(noteCell);
+            container.appendChild(noteRow);
+        }
+        
         const row = document.createElement('tr');
 
         const courseCodeCell = document.createElement('td');
@@ -214,32 +291,9 @@ function displaySemesterData(semesterData, index) {
         prerequisitesCell.innerHTML = grade.subjectPrereq || '';
         row.appendChild(prerequisitesCell);
 
-        // Check if finalGrade or completionGrade is 5 and add a note if necessary
-        if (grade.subjectFinalGrade == 5 || grade.subjectCompletionGrade == 5 || grade.subjectFinalGrade == 'DRP' || grade.subjectCompletionGrade == 'DRP') {
-            const noteRow = document.createElement('tr');
-            const noteCell = document.createElement('td');
-            noteCell.colSpan = 6; // Span across all table columns
-            noteCell.innerHTML = `Note: You need to retake ${grade.subjectCode}.`;
-            noteCell.style.color = 'red';
-            noteCell.style.fontWeight = 'bold';
-            noteRow.appendChild(noteCell);
-            container.appendChild(noteRow);
-        }
-        if (grade.subjectFinalGrade == 'INC' || grade.subjectCompletionGrade == null) {
-            const noteRow = document.createElement('tr');
-            const noteCell = document.createElement('td');
-            noteCell.colSpan = 6; // Span across all table columns
-            noteCell.innerHTML = `Note: You have one year to comply your remaining credits for ${grade.subjectCode}.`;
-            noteCell.style.color = 'red';
-            noteCell.style.fontWeight = 'bold';
-            noteRow.appendChild(noteCell);
-            container.appendChild(noteRow);
-        }
-
         container.appendChild(row);
     });
 }
-
 
 // Combine both functions and display data for multiple semesters
 async function displayCourseGrades() {
@@ -247,21 +301,43 @@ async function displayCourseGrades() {
         const semestralData = await semestralInfo();
         const gradesData = await getCourseGrades(semestralData);
 
-        // Group grades by semester
-        const groupedData = gradesData.reduce((acc, grade) => {
-            if (!acc[grade.semesterID]) {
-                acc[grade.semesterID] = [];
+        let groupedData = {};
+        const subsToRetake = [];
+
+        for (const grade of gradesData) {
+            if (!groupedData[grade.semesterID]) {
+                groupedData[grade.semesterID] = [];
             }
-            acc[grade.semesterID].push(grade);
-            return acc;
-        }, {});
+
+            groupedData[grade.semesterID].push(grade);
+
+            if (grade.subjectFinalGrade == 5 || 
+                grade.subjectCompletionGrade == 5 || 
+                grade.subjectFinalGrade == 'DRP' || 
+                grade.subjectCompletionGrade == 'DRP') {
+                let newGrade = grade;
+                const nextSem = await (getNextSemesterID(newGrade.semesterID));
+                subsToRetake.push({...newGrade, semesterID: nextSem.academicYearID, semesterName: nextSem.academicYearName, toRetake: false, subjectFinalGrade: null, subjectCompletionGrade: null});
+            }
+        }
+        for (const sub of subsToRetake) {
+            if (!groupedData[sub.semesterID]) {
+                groupedData[sub.semesterID] = [];
+            }
+
+            groupedData[sub.semesterID].push(sub);
+        }
 
         // Display each semester using Object.entries to iterate over groupedData
         let index = 0;
-        for (const [semesterID, semesterGrades] of Object.entries(groupedData)) {
+        for (const semesterID in groupedData) {
+            const semesterGrades = groupedData[semesterID];
+            semesterGrades.sort((prev, curr) => {
+                return prev.toRetake ? -1 : curr.toRetake ? 1 : 0;
+            });
             if (semesterGrades.length > 0) {
                 createSemesterContainer(index, semesterGrades[0].semesterName);
-                displaySemesterData(semesterGrades, index);
+                displaySemesterData(semesterGrades, index,semestralData);
                 index++;
             }
         }

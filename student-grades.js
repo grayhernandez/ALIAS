@@ -74,7 +74,6 @@ async function getNextSemesterID(prevSemID) {
 
         let currentYear = 0;
         let currentSemNum = 0;
-        
 
         for (let semester of semesterData) {
             if (semester.academicYearID == prevSemID) {
@@ -83,7 +82,7 @@ async function getNextSemesterID(prevSemID) {
             
                 for (let semester2 of semesterData) {
                     if (semester2.yearLevel == currentYear && semester2.semNumber == currentSemNum) {
-                        nextSemester = semester2
+                        nextSemester = semester2;
                         return nextSemester;
                     }
                 }
@@ -208,6 +207,7 @@ function createSemesterContainer(index, semesterName) {
 
 
 function displaySemesterData(semesterData, index) {
+    console.log(semesterData)
     const totalUnitsCell = document.getElementById(`total-units-${index}`);
     const classStandingCell = document.getElementById(`class-standing-${index}`);
     const gwaCell = document.getElementById(`gwa-${index}`);
@@ -223,6 +223,7 @@ function displaySemesterData(semesterData, index) {
     const container = document.getElementById(`course-table-${index}`);
     container.innerHTML = ''; // Clear existing content
 
+    console.log("Semester Data:", semesterData);
     semesterData.forEach(grade => {
         // if (grade.movedToNextSemester) return;  // Skip grades that were moved to the next semester
         
@@ -243,7 +244,7 @@ function displaySemesterData(semesterData, index) {
             const noteCell = document.createElement('td');
             noteCell.colSpan = 6; // Span across all table columns
             noteCell.innerHTML = `Note: You have complied your remaining credits for ${grade.subjectCode}.`;
-            noteCell.style.color = 'red';
+            noteCell.style.color = 'green';
             noteCell.style.fontWeight = 'bold';
             noteRow.appendChild(noteCell);
             container.appendChild(noteRow);
@@ -308,15 +309,17 @@ async function displayCourseGrades(studentID) {
 
             groupedData[grade.semesterID].push(grade);
 
-            if (grade.subjectFinalGrade == 5 || grade.subjectCompletionGrade == 5 || grade.subjectFinalGrade == 'DRP' || grade.subjectCompletionGrade == 'DRP') {
-                const nextSem = await (getNextSemesterID(grade.semesterID));
-                grade.semesterID = nextSem.academicYearID;
-                // Assume grade.semestralUnits should be updated accordingly
-                grade.subjectGrade = 0;
-                subsToRetake.push({...grade, toRetake: true, subjectFinalGrade: null});
+            if (grade.subjectFinalGrade == 5 || 
+                grade.subjectCompletionGrade == 5 || 
+                grade.subjectFinalGrade == 'DRP' || 
+                grade.subjectCompletionGrade == 'DRP') {
+                let newGrade = grade;
+                const nextSem = await (getNextSemesterID(newGrade.semesterID));
+                subsToRetake.push({...newGrade, semesterID: nextSem.academicYearID, semesterName: nextSem.academicYearName, toRetake: false, subjectFinalGrade: null, subjectCompletionGrade: null});
             }
         }
 
+        console.log(subsToRetake);
         for (const sub of subsToRetake) {
             if (!groupedData[sub.semesterID]) {
                 groupedData[sub.semesterID] = [];

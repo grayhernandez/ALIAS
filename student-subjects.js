@@ -268,7 +268,7 @@ async function displayCourseDetails(studentID) {
                 grade.semesterID = nextSem.academicYearID;
                 grade.semesterName = nextSem.academicYearName;
                 // Assume grade.semestralUnits should be updated accordingly
-                grade.subjectGrade = 0;
+                grade.subjectGrade = null;
 
                 subsToRetake.push(grade);
 
